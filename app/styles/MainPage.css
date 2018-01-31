@@ -1,0 +1,55 @@
+:local(.MainPageLayout) {
+	/* height: 100vh; */
+	height: 900px;
+	background-color: royalblue;
+	width: 100%;
+}
+/*
+:local(.TerminalLayout) {
+	background-color: black;
+	color: white;
+	display: inline-block;
+	height: 100vh;
+	padding: 0px;
+}
+
+:local(.InformationLayout) {
+	padding: 0px;
+	display: inline-block;
+	height: 100vh;
+}
+
+:local(.CanvasLayout) {
+	height: 50vh;
+	background-color: white;
+	//color: black;
+}
+
+:local(.DetailsBox) {
+	height: 50vh;
+	background-color: white;
+}
+*/
+
+:local(.MenuBox) {
+	display: inline-block;
+	width: 300px;
+	/* height: 100vh; */
+}
+
+:local(.HorizontalLayout) {
+	display: flex;
+  float: left;
+	width: 100%;
+}
+
+:local(.CardField) {
+	/* flex:1; */
+	width: 100%;
+}
+
+:local(.backgroundColor) {
+	background-color: black;
+	background-color: #333;
+	height: 100vh;
+}
