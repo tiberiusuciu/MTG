@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css'
 
+import ActionTabs from './Tabs/ActionTabs';
 import styles from '../../styles/Menu/MenuTools.css';
 
 class MenuTools extends Component {
@@ -14,6 +15,7 @@ class MenuTools extends Component {
 						<Tab>Hand</Tab>
 						<Tab>Chat</Tab>
 						<Tab>Menu</Tab>
+						<Tab>Action</Tab>
 					</TabList>
 
 					<TabPanel>
@@ -27,6 +29,10 @@ class MenuTools extends Component {
 					</TabPanel>
 					<TabPanel>
 						<h2>Any content 4</h2>
+					</TabPanel>
+					<TabPanel>
+						<ActionTabs />
+						<h2>Any content 5</h2>
 					</TabPanel>
 				</Tabs>
 
