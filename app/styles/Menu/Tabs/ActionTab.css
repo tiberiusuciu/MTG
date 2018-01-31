@@ -1,0 +1,5 @@
+:local(.drawButton) {
+  background-color: crimson;
+  width: 100px;
+  height: 40px;
+}

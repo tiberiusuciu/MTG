@@ -13,3 +13,7 @@
 :local(.individualTab) {
 	display: inline-block;
 }
+
+:local(.fontSize) {
+	font-size: 14px;
+}
