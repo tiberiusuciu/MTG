@@ -1,0 +1,11 @@
+:local(.PlayerPicture) {
+  /* height: 50vh; */
+  height: 110px;
+  background-color: red;
+  width: 200px;
+  display: inline-block;
+  background: linear-gradient(to bottom, transparent, transparent, black, black, black), url("https://magiccards.info/scans/en/nph/9.jpg");
+  background-position: -14px -50px;
+  background-size: 230px 300px;
+
+}
