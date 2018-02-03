@@ -1,0 +1,7 @@
+:local(.PlayerInfo) {
+  /* height: 50vh; */
+  height: 448px;
+  background-color: CornflowerBlue;
+  width: 200px;
+  display: inline-block;
+}

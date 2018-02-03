@@ -17,3 +17,12 @@
 :local(.fontSize) {
 	font-size: 14px;
 }
+
+:local(.fontSize) {
+	padding: 0px;
+	margin: 0px;
+}
+
+:local(.tabPanelDiv) {
+	padding: 10px;
+}

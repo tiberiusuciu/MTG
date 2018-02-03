@@ -3,3 +3,33 @@
   width: 100px;
   height: 40px;
 }
+
+:local(.button) {
+  width: 120px;
+  display: inline-block;
+}
+
+:local(.actionTabButton) {
+  margin-bottom: 10px;
+}
+
+:local(.formDimensions) {
+  width: 120px;
+  display: inline-block;
+  margin-left: 40px;
+  text-align: right;
+}
+
+:local(.labelFontSize) {
+  font-size: 10px;
+}
+
+:local(.menuBG) {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #666;
+}
+
+:local(.deck) {
+  width: 280px;
+}

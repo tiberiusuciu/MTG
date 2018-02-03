@@ -10,7 +10,7 @@ class MenuTools extends Component {
 		return (
 			<div className={styles.menuTools}>
 				<Tabs className={styles.fontSize}>
-					<TabList>
+					<TabList className={styles.fontSize}>
 						<Tab>Stats</Tab>
 						<Tab>Hand</Tab>
 						<Tab>Chat</Tab>
@@ -19,20 +19,29 @@ class MenuTools extends Component {
 					</TabList>
 
 					<TabPanel>
-						<h2>Any content 1</h2>
+						<div className={styles.tabPanelDiv}>
+							<h2>Any content 1</h2>
+						</div>
 					</TabPanel>
 					<TabPanel>
-						<h2>Any content 2</h2>
+						<div className={styles.tabPanelDiv}>
+							<h2>Any content 2</h2>
+						</div>
 					</TabPanel>
 					<TabPanel>
-						<h2>Any content 3</h2>
+						<div className={styles.tabPanelDiv}>
+							<h2>Any content 3</h2>
+						</div>
 					</TabPanel>
 					<TabPanel>
-						<h2>Any content 4</h2>
+						<div className={styles.tabPanelDiv}>
+							<h2>Any content 4</h2>
+						</div>
 					</TabPanel>
 					<TabPanel>
-						<ActionTab />
-						<h2>Any content 5</h2>
+						<div className={styles.tabPanelDiv}>
+							<ActionTab />
+						</div>
 					</TabPanel>
 				</Tabs>
 

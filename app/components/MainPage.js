@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 // import CanvasBox from './CanvasBox';
 import MenuBox from './Menu/MenuBox';
 import CardField from './Field/CardField';
+import HandBox from './Menu/HandBox';
 
 import styles from '../styles/MainPage.css';
 
@@ -26,6 +27,9 @@ class MainPage extends Component {
 		)
 	}
 };
+// <div className={styles.HandBox}>
+// 	<HandBox />
+// </div>
 
 /*
 <div className={styles.TerminalLayout + " col-xs-8"}>
