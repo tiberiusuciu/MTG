@@ -1,0 +1,10 @@
+:local(.BattleField) {
+  display: inline-block;
+  /* position: absolute; */
+  top: 0px;
+  height: 449px;
+  background-color: crimson;
+  margin-bottom: 0px;
+  min-width: 800px;
+  width: 100%;
+}

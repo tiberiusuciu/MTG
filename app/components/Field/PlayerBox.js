@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import PlayerInfo from './PlayerInfo';
+import BattleField from './BattleField';
 
 import styles from '../../styles/Field/PlayerField.css';
 
@@ -9,7 +10,7 @@ class PlayerBox extends Component {
 		return (
 			<div className={styles.PlayerBox}>
 				<PlayerInfo />
-				asd
+				<BattleField />
 			</div>
 		)
 	}

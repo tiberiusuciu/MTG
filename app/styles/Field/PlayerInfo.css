@@ -1,7 +1,8 @@
 :local(.PlayerInfo) {
   /* height: 50vh; */
-  height: 448px;
+  height: 449px;
   background-color: CornflowerBlue;
   width: 200px;
   display: inline-block;
+  position: relative;
 }

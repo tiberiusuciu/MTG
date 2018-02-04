@@ -1,11 +1,20 @@
 :local(.PlayerPicture) {
   /* height: 50vh; */
   height: 110px;
+  position: relative;
   background-color: red;
   width: 200px;
   display: inline-block;
   background: linear-gradient(to bottom, transparent, transparent, black, black, black), url("https://magiccards.info/scans/en/nph/9.jpg");
   background-position: -14px -50px;
   background-size: 230px 300px;
+}
 
+:local(.PlayerName) {
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  left: 0px;
+  font-weight: 600;
+  margin-bottom: 0px;
 }
