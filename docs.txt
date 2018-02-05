@@ -1,0 +1,41 @@
+This documentation's purpose is to cover the general purpose of the app and the different features it will provide.
+
+For starters, this is a mtg application
+A player can:
+
+Browse cards:
+	- View images
+	- View descriptions
+	- Search By Filters
+		- CMC cost
+		- Power
+		- Type
+		- Color
+		- Rarity
+		- Set
+	- View statistics such as most used or staples for format?
+	- View special cards
+
+Build Deck
+	- No limit on deck amounts, for now :^)
+	- Supports many formats, including custom formats
+	- Allow a separate tab to collect rarer version of the cards (* Shiny *)
+
+Build a profile
+	- Can view match history
+	- Can view statistics
+	- Can view deck lists (private/public)
+	- Can view friends
+	- Select Profile Picture (Unlockables?)
+	- Level? Based on match played
+
+Can Talk to friends
+	- Regular chat that includes specials features such as deck listing and deck sharing and start matches
+
+Make match
+	- Can be regular formats with deck loading
+	- Special custom format (Rainbow Format)
+	- Random Match Making
+	- Start game with friends
+	- 1v1, *v*
+	- Earn system points to customize card appearances
