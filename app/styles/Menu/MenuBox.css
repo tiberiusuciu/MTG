@@ -2,7 +2,9 @@
 	background-color: crimson;
 	/* display: inline-block; */
 	width: 300px;
-	height: 900px;
-	display:flex;
+	/* height: 900px; */
+	/* flex: 1; */
+	display: flex;
+	flex: 1;
 	flex-direction: column;
 }
