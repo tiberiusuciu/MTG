@@ -1,6 +1,5 @@
 :local(.BattleField) {
   display: inline-block;
-  /* position: absolute; */
   top: 0px;
   height: 449px;
   background-color: crimson;

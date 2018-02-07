@@ -1,44 +1,14 @@
 :local(.MainPageLayout) {
-	/* height: 100vh; */
-	/* height: 900px; */
 	background-color: royalblue;
 	width: 100%;
 	display: flex;
 	float: left;
 }
-/*
-:local(.TerminalLayout) {
-	background-color: black;
-	color: white;
-	display: inline-block;
-	height: 100vh;
-	padding: 0px;
-}
-
-:local(.InformationLayout) {
-	padding: 0px;
-	display: inline-block;
-	height: 100vh;
-}
-
-:local(.CanvasLayout) {
-	height: 50vh;
-	background-color: white;
-	//color: black;
-}
-
-:local(.DetailsBox) {
-	height: 50vh;
-	background-color: white;
-}
-*/
 
 :local(.MenuBox) {
-	/* display: inline-block; */
 	width: 300px;
 	display: flex;
 	flex-flow: column;
-	/* height: 100vh; */
 }
 
 :local(.HorizontalLayout) {
@@ -50,9 +20,6 @@
 :local(.CardField) {
 	flex:1;
 	flex-grow: 100;
-	/* width: 100%; */
-	/* height: 100vh; */
-	/* width: 1000px; */
 }
 
 :local(.backgroundColor) {
