@@ -2,7 +2,6 @@
   height: 449px;
   background-color: steelblue;
 	display: flex;
-  /* min-width: 1000px; */
   position: relative;
 }
 
@@ -11,7 +10,6 @@
   position: absolute;
   top: 0px;
   height: 449px;
-  /* background-color: red; */
 	background: white url("https://gadgetflowcdn.com/wp-content/themes/thegadgetflow4/images/categories/random_large/all_things_wood.jpg");
   margin-bottom: 0px;
 }
