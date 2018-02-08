@@ -7,8 +7,8 @@
 
 :local(.dimensions) {
 	width: 100%;
-	max-height: 900px;
-	overflow-y: auto;
+	/* max-height: 900px; */
+	/* overflow-y: auto; */
 }
 
 :local(.borderBottom) {

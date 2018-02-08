@@ -1,5 +1,5 @@
 :local(.MainPageLayout) {
-	background-color: royalblue;
+	background-color: black;
 	width: 100%;
 	display: flex;
 	float: left;
@@ -20,6 +20,7 @@
 :local(.CardField) {
 	flex:1;
 	flex-grow: 100;
+	overflow: auto;
 }
 
 :local(.backgroundColor) {
