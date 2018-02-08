@@ -9,6 +9,9 @@ class PlayerInfo extends Component {
 		return (
 			<div className={styles.PlayerInfo}>
 				<PlayerPicture />
+				<div>
+					test
+				</div>
 			</div>
 		)
 	}

@@ -18,9 +18,10 @@
 }
 
 :local(.CardField) {
+	overflow-x: hidden;
 	flex:1;
 	flex-grow: 100;
-	overflow: auto;
+	overflow-y: auto;
 }
 
 :local(.backgroundColor) {

@@ -1,12 +1,13 @@
 :local(.cardField) {
-	background-color: plum;
-	display: inline-block;
-	width: 100%;
-	min-width: 1000px;
+	background-color: black;
+	display: flex;
+	/* width: 100%; */
+	/* min-width: 1000px; */
 }
 
 :local(.dimensions) {
-	width: 100%;
+	flex: 1;
+	/* width: 100%; */
 	/* max-height: 900px; */
 	/* overflow-y: auto; */
 }
