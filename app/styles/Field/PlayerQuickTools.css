@@ -1,0 +1,6 @@
+local(.PlayerQuickTools) {
+	width: 98px;
+	height: 330px;
+	background-color: green;
+	display: inline-block;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import PlayerPicture from './PlayerPicture';
+import PlayerQuickTools from './PlayerQuickTools';
 
 import styles from '../../styles/Field/PlayerInfo.css';
 
@@ -9,8 +10,8 @@ class PlayerInfo extends Component {
 		return (
 			<div className={styles.PlayerInfo}>
 				<PlayerPicture />
-				<div>
-					test
+				<div className={styles.QuicktoolArea}>
+					<PlayerQuickTools />
 				</div>
 			</div>
 		)

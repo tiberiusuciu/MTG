@@ -5,3 +5,12 @@
   display: inline-block;
   position: relative;
 }
+
+:local(.QuicktoolArea) {
+	width: 194px;
+	border: 0px;
+	margin: 3px;
+	height: 324px;
+	display: block;
+	background: plum;
+}

@@ -2,7 +2,8 @@
   display: inline-block;
   top: 0px;
   height: 449px;
-	background: white url("https://gadgetflowcdn.com/wp-content/themes/thegadgetflow4/images/categories/random_large/all_things_wood.jpg");
+	/* background: white url("https://gadgetflowcdn.com/wp-content/themes/thegadgetflow4/images/categories/random_large/all_things_wood.jpg"); */
+	background-color: brown;
   margin-bottom: 0px;
 	flex: 1;
 }
