@@ -9,10 +9,11 @@ class CardField extends Component {
 		return (
 			<div className={styles.cardField}>
         <div className={styles.dimensions}>
-          <div className={styles.PlayerBox + " " + styles.borderBottom}>
+          <div className={styles.PlayerBox}>
             <PlayerBox />
           </div>
-          <div className={styles.PlayerBox + " " + styles.borderTop}>
+					<div className={styles.Separator}></div>
+          <div className={styles.PlayerBox}>
             <PlayerBox />
           </div>
         </div>

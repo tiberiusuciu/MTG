@@ -7,10 +7,9 @@
 	flex: 1;
 }
 
-:local(.borderBottom) {
-	border-bottom: 1px solid #333;
-}
-
-:local(.borderTop) {
-	border-top: 1px solid #333;
+:local(.Separator) {
+	height: 2px;
+	width: 100%;
+	display: block;
+	background-color: black;
 }
