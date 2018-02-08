@@ -11,12 +11,8 @@
 }
 
 :local(.PlayerName) {
-  /* position: absolute; */
-  /* bottom: 0px; */
   color: white;
-  /* left: 0px; */
   font-weight: 600;
-  /* margin-bottom: 0px; */
 	margin-top: 94px;
 	margin-left: 3px;
 }

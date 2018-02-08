@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import PlayerPicture from './PlayerPicture';
-import PlayerQuickTools from './PlayerQuickTools';
+import PlayerPiles from './PlayerPiles';
+import PlayerCountersList from './PlayerCountersList';
 
 import styles from '../../styles/Field/PlayerInfo.css';
 
@@ -10,8 +11,9 @@ class PlayerInfo extends Component {
 		return (
 			<div className={styles.PlayerInfo}>
 				<PlayerPicture />
-				<div className={styles.QuicktoolArea}>
-					<PlayerQuickTools />
+				<div className={styles.QuicktoolsArea}>
+					<PlayerCountersList />
+					<PlayerPiles />
 				</div>
 			</div>
 		)
