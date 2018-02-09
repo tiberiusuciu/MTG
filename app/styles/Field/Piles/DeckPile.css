@@ -1,0 +1,8 @@
+:local(.DeckPile) {
+	width: 97px;
+	background-color: royalblue;
+	height: 108px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
