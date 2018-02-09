@@ -6,7 +6,7 @@ class DeckPile extends Component {
 	render() {
 		return (
 			<div className={styles.DeckPile}>
-				<div>
+				<div className={styles.deckCard}>
 					card
 				</div>
 			</div>
