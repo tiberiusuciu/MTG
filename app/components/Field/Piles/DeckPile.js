@@ -6,12 +6,18 @@ class DeckPile extends Component {
 	render() {
 		return (
 			<div className={styles.DeckPile}>
-				<div className={styles.deckCard}>
-					card
-				</div>
+				<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.deckCard} />
 			</div>
 		)
 	}
 };
 
 export default DeckPile;
+
+
+
+
+
+// <div className={styles.deckCard}>
+// 	card
+// </div>

@@ -6,6 +6,7 @@ class GraveyardPile extends Component {
 	render() {
 		return (
 			<div className={styles.GraveyardPile}>
+				<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.graveyardCard} />
 			</div>
 		)
 	}

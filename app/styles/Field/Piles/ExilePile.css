@@ -1,8 +1,14 @@
 :local(.ExilePile) {
 	width: 97px;
-	background-color: cyan;
 	height: 108px;
 	margin: 0;
 	padding: 0;
 	border: 0;
+}
+
+:local(.exileCard) {
+	position: absolute;
+	margin: 4px 8px;
+	height: 100px;
+	width: 81px;
 }

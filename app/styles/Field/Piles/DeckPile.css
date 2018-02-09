@@ -1,6 +1,5 @@
 :local(.DeckPile) {
 	width: 97px;
-	background-color: royalblue;
 	height: 108px;
 	margin: 0;
 	padding: 0;
@@ -12,9 +11,4 @@
 	margin: 4px 8px;
 	height: 100px;
 	width: 81px;
-	background-color: black;
-	background: white url("https://magiccards.info/scans/en/nph/9.jpg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
 }
