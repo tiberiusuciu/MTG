@@ -6,12 +6,10 @@ class CardDisplay extends Component {
 	render() {
 		return (
 			<div className={styles.display}>
-					<img width="300px" height="400px" />
+					<img src="https://magiccards.info/scans/en/dgm/11.jpg" width="300px" height="400px" />
 			</div>
 		)
 	}
 };
-
-//src="https://magiccards.info/scans/en/dgm/11.jpg"
 
 export default CardDisplay;
