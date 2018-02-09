@@ -14,6 +14,7 @@
 	width: 81px;
 	background-color: black;
 	background: white url("https://magiccards.info/scans/en/nph/9.jpg");
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 	background-position: center;
 }
