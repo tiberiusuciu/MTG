@@ -6,7 +6,9 @@ class DeckPile extends Component {
 	render() {
 		return (
 			<div className={styles.DeckPile}>
-				<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.deckCard} />
+				<div className={styles.backCard}>
+					<div className={styles.backCircle}></div>
+				</div>
 				<div className={styles.cardCount}>60</div>
 			</div>
 		)
@@ -15,7 +17,12 @@ class DeckPile extends Component {
 
 export default DeckPile;
 
+//<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.deckCard} />
+//<div className={styles.emptyPile}></div>
 
+// <div className={styles.backCard}>
+// 	<div className={styles.backCircle}></div>
+// </div>
 
 
 
