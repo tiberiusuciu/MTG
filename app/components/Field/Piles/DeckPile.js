@@ -7,6 +7,7 @@ class DeckPile extends Component {
 		return (
 			<div className={styles.DeckPile}>
 				<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.deckCard} />
+				<div className={styles.cardCount}>60</div>
 			</div>
 		)
 	}

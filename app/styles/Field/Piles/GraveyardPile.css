@@ -13,7 +13,30 @@
 
 :local(.graveyardCard) {
 	position: absolute;
-	margin: 4px 8px;
+	margin: 4px 13px;
 	height: 100px;
-	width: 81px;
+	width: 71px;
+}
+
+:local(.cardCount) {
+	position: absolute;
+	color: white;
+	background-color: royalblue;
+	font-weight: 600;
+	font-size: 13px;
+	margin-top: 85px;
+	right: 16px;
+	width: 71px;
+	opacity: .8;
+	text-align: center;
+	animation-name: graveGlow;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+@keyframes graveGlow {
+    from {background-color: royalblue;}
+    to {background-color: navy;}
 }
