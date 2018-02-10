@@ -1,7 +1,17 @@
 :local(.PlayerCountersList) {
 	width: 97px;
 	height: 324px;
-	background-color: crimson;
+	border: 1px solid black;
+	background-color: white;
 	display: inline-block;
 	position: absolute;
+}
+
+:local(.counter) {
+	width: 95px;
+	background-color: crimson;
+	height: 40px;
+	color: white;
+	line-height: 39px;
+	text-align: center;
 }

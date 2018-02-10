@@ -6,7 +6,7 @@ class PlayerCountersList extends Component {
 	render() {
 		return (
 			<div className={styles.PlayerCountersList}>
-				<p>Counters</p>
+				<div className={styles.counter}>counter</div>
 
 			</div>
 		)
