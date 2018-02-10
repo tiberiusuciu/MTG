@@ -6,7 +6,7 @@ class ExilePile extends Component {
 	render() {
 		return (
 			<div className={styles.ExilePile}>
-				<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.exileCard} />
+				<div className={styles.emptyPile}></div>
 				<div className={styles.cardCount}>0</div>
 			</div>
 		)
@@ -14,3 +14,4 @@ class ExilePile extends Component {
 };
 
 export default ExilePile;
+// <img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.exileCard} />

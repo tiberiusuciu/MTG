@@ -6,7 +6,7 @@ class GraveyardPile extends Component {
 	render() {
 		return (
 			<div className={styles.GraveyardPile}>
-				<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.graveyardCard} />
+				<div className={styles.emptyPile}></div>
 				<div className={styles.cardCount}>0</div>
 			</div>
 		)
@@ -14,3 +14,4 @@ class GraveyardPile extends Component {
 };
 
 export default GraveyardPile;
+// <img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.graveyardCard} />
