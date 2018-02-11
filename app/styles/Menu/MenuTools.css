@@ -1,6 +1,6 @@
 :local(.menuTools) {
 	background-color: white;
-	display: block;
+	/* display: flex; */
 	width: 300px;
 	flex: 1;
 	overflow-x: hidden;
@@ -16,13 +16,39 @@
 
 :local(.fontSize) {
 	font-size: 14px;
+	/* display: flex;
+  flex-flow: column;
+  flex: 1; */
 }
 
 :local(.fontSize) {
 	padding: 0px;
 	margin: 0px;
+	/* flex: 1;
+display: flex;
+flex-flow: column; */
+}
+
+:local(.dimensions) {
+	/* flex: 1;
+display: flex;
+flex-flow: column; */
 }
 
 :local(.tabPanelDiv) {
+	margin-top: 6px;
 	padding: 10px;
+	background-color: lime;
+	overflow-y: auto;
+}
+
+:local(.header) {
+	text-align: center;
+}
+
+:local(.tab) {
+	width: 50px;
+	margin: 5px 5px 0px 5px;
+	text-align: center;
+	display: inline-block;
 }

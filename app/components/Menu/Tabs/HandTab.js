@@ -5,20 +5,19 @@ import ScryButton from './ActionTab/ScryButton';
 import RevealButton from './ActionTab/RevealButton';
 import DeckButton from './ActionTab/DeckButton';
 
-import styles from '../../../styles/Menu/Tabs/ActionTab.css';
+import styles from '../../../styles/Menu/TabStyle.css';
 
-class ActionTabs extends Component {
+class HandTab extends Component {
 	render() {
 		return (
-			<div>
-				<div className={styles.actionTabButton}>
-				</div>
+			<div className={styles.tabLayout}>
+
 			</div>
 		)
 	}
 };
 
-export default ActionTabs;
+export default HandTab;
 
 
 

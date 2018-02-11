@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import MenuBox from './Menu/MenuBox';
 import CardField from './Field/CardField';
-import HandBox from './Menu/HandBox';
+// import HandBox from './Menu/HandBox';
 
 import styles from '../styles/MainPage.css';
 

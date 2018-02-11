@@ -43,13 +43,13 @@
 	font-style: italic;
 }
 
-:local(.addText) {
+/* :local(.addText) {
 	font-weight: bolder;
 	color: limegreen;
 	text-align: center;
 	width: 95px;
 	font-size: 30px;
-}
+} */
 
 :local(.counterCount) {
 	font-size: 15px;
@@ -65,16 +65,16 @@
 	background-color: transparent;
 }
 
-:local(.hoverAddStyle) {
+/* :local(.hoverAddStyle) {
 	height: 40px;
 	background-color: transparent;
-}
+} */
 
 :local(.hoverStyle:hover) {
 	background-color: #FFFFFF88;
 }
 
-:local(.hoverAddStyle:hover) {
+/* :local(.hoverAddStyle:hover) {
 	height: 40px;
 	background-color: #00000011;
-}
+} */
