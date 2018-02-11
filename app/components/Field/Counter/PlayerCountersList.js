@@ -6,7 +6,11 @@ class PlayerCountersList extends Component {
 	render() {
 		return (
 			<div className={styles.PlayerCountersList}>
-				<div className={styles.counter}>counter</div>
+				<div className={styles.counter}>
+					<div className={styles.hoverStyle}>
+						counter
+					</div>
+				</div>
 
 			</div>
 		)

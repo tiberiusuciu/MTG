@@ -15,3 +15,12 @@
 	line-height: 39px;
 	text-align: center;
 }
+
+:local(.hoverStyle) {
+	height: 40px;
+	background-color: transparent;
+}
+
+:local(.hoverStyle:hover) {
+	background-color: #FFFFFF88;
+}
