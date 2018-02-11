@@ -9,11 +9,28 @@
 
 :local(.counter) {
 	width: 95px;
-	background-color: crimson;
+	background-color: white;
 	height: 40px;
-	color: white;
+	color: black;
 	line-height: 39px;
-	text-align: center;
+	text-align: left;
+}
+
+:local(.text) {
+	margin-left: 5px;
+	display: inline-block;
+	font-size: 15px;
+	width: 50px;
+	font-style: italic;
+}
+
+:local(.counterCount) {
+	font-size: 15px;
+	width: 30px;
+	text-align: right;
+	font-weight: bold;
+	margin-right: 10px;
+	display: inline-block;
 }
 
 :local(.hoverStyle) {
