@@ -1,6 +1,6 @@
 :local(.PlayerBox) {
   height: 449px;
-  background-color: steelblue;
+  /* background-color: steelblue; */
 	display: flex;
   position: relative;
 }

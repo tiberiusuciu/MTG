@@ -2,9 +2,28 @@
 	width: 97px;
 	height: 324px;
 	border: 1px solid black;
-	background-color: white;
 	display: inline-block;
 	position: absolute;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+:local(.PlayerCountersList::-webkit-scrollbar) {
+	width: 2px;
+	position: absolute;
+	background: transparent;
+	display: none;
+}
+
+:local(.PlayerCountersList::-webkit-scrollbar-track) {
+	background: black;
+}
+:local(.PlayerCountersList::-webkit-scrollbar-thumb) {
+	background: white;
+	border-radius: 50px;
+}
+:local(.PlayerCountersList::-webkit-scrollbar-thumb:hover) {
+	background: #000000AA;
 }
 
 :local(.counter) {
@@ -24,6 +43,14 @@
 	font-style: italic;
 }
 
+:local(.addText) {
+	font-weight: bolder;
+	color: limegreen;
+	text-align: center;
+	width: 95px;
+	font-size: 30px;
+}
+
 :local(.counterCount) {
 	font-size: 15px;
 	width: 30px;
@@ -38,6 +65,16 @@
 	background-color: transparent;
 }
 
+:local(.hoverAddStyle) {
+	height: 40px;
+	background-color: transparent;
+}
+
 :local(.hoverStyle:hover) {
 	background-color: #FFFFFF88;
+}
+
+:local(.hoverAddStyle:hover) {
+	height: 40px;
+	background-color: #00000011;
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from '../../../styles/Field/Counter/PlayerCountersList.css';
 
-class ManaCounter extends Component {
+class HandCounter extends Component {
 	render() {
 		return (
 			<div className={styles.counter} style={{backgroundColor: this.props.color}}>
@@ -15,4 +15,4 @@ class ManaCounter extends Component {
 	}
 };
 
-export default ManaCounter;
+export default HandCounter;
