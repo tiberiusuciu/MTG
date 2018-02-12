@@ -44,11 +44,51 @@ flex-flow: column; */
 
 :local(.header) {
 	text-align: center;
+	display: block;
 }
 
 :local(.tab) {
-	width: 50px;
-	margin: 5px 5px 0px 5px;
+	width: 60px;
 	text-align: center;
 	display: inline-block;
+	background-color: white;
+	height: 40px;
+	line-height: 39px;
+	transition: background-color 1s;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+:local(.tab:hover) {
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+}
+
+:local(.active) {
+	border-bottom: 1px solid blue;
+	font-weight: bolder;
+}
+:local(.content) {
+	/* overflow-y: hidden; */
+	overflow-x: hidden;
+	max-height: calc(100vh - 440px);
+}
+
+:local(.content::-webkit-scrollbar) {
+	width: 2px;
+	position: absolute;
+	background: transparent;
+	display: none;
+}
+
+:local(.content::-webkit-scrollbar-track) {
+	background: black;
+}
+:local(.content::-webkit-scrollbar-thumb) {
+	background: white;
+	border-radius: 50px;
+}
+:local(.content::-webkit-scrollbar-thumb:hover) {
+	background: #000000AA;
 }

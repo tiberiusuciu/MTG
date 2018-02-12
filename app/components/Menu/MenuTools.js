@@ -11,11 +11,14 @@ class MenuTools extends Component {
 		return (
 			<div className={styles.menuTools}>
 				<div className={styles.header}>
-					<div className={styles.tab}>Stats</div>
+					<div className={styles.tab + " " + styles.active}>Stats</div>
 					<div className={styles.tab}>Hand</div>
 					<div className={styles.tab}>Chat</div>
 					<div className={styles.tab}>Menu</div>
 					<div className={styles.tab}>Action</div>
+				</div>
+				<div className={styles.content}>
+					<HandTab/>
 				</div>
 
 			</div>
