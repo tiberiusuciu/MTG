@@ -38,13 +38,3 @@ class HandTab extends Component {
 };
 
 export default HandTab;
-
-
-
-// <DeckButton />
-// <DrawButton />
-// <ScryButton />
-// <RevealButton />
-// <DrawButton />
-// <ScryButton />
-// <RevealButton />

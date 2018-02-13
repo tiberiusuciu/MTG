@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 import ActionTab from './Tabs/ActionTab';
 import HandTab from './Tabs/HandTab';
+import ChatTab from './Tabs/ChatTab';
 import styles from '../../styles/Menu/MenuTools.css';
 
 class MenuTools extends Component {
@@ -18,7 +19,7 @@ class MenuTools extends Component {
 					<div className={styles.tab}>Action</div>
 				</div>
 				<div className={styles.content}>
-					<HandTab/>
+					<ChatTab/>
 				</div>
 
 			</div>
@@ -27,6 +28,7 @@ class MenuTools extends Component {
 };
 
 export default MenuTools;
+// <HandTab/>
 
 // <Tabs className={styles.dimensions}>
 // 	<TabList className={styles.fontSize}>

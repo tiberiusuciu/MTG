@@ -1,6 +1,7 @@
 :local(.tabLayout) {
   width: 300px;
   /* height: 1920px; */
+  /* background-color: gold; */
 }
 
 :local(.cardShape) {
@@ -8,4 +9,36 @@
   /* height: 140px; */
   background-color: blue;
   display: inline-block;
+}
+
+:local(.chatInput) {
+  width: 300px;
+  height: 30px;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #EEE;
+}
+
+:local(.chatInput:focus) {
+  outline: none;
+  border-bottom: 1px solid #CCC;
+}
+
+:local(.chatLog) {
+  background-color: white;
+  /* text-align: justify; */
+}
+
+:local(.chatLogUsername) {
+  font-weight: bold;
+}
+
+:local(.chatLogMessage) {
+  font-size: 14px;
+}
+
+:local(.chatTimestamp) {
+  color: crimson;
+  font-weight: lighter;
+  font-size: 11px;
 }
