@@ -5,3 +5,39 @@
 	flex: 1;
 	flex-direction: column;
 }
+
+:local(.GamePhases) {
+	display: block;
+	position: relative;
+	height: 25px;
+	/* background-color: white; */
+	/* line-height: 24px; */
+	/* height: 25px; */
+	/* border-top: 1px solid #CCC; */
+	border-bottom: 2px solid #CCC;
+}
+
+:local(.phase) {
+	/* position: absolute; */
+	vertical-align: top;
+	height: 24px;
+	background-color: white;
+	display: inline-block;
+	width: 150px;
+	line-height: 23px;
+	font-size: 10px;
+	text-align: center;
+	/* height: 25px; */
+}
+
+:local(.title) {
+	background-color: #333;
+	color: white;
+	font-weight: bold;
+}
+
+:local(.next:hover) {
+	background-color: #EEE;
+	cursor: pointer;
+	font-weight: bold;
+}

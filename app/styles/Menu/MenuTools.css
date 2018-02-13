@@ -3,7 +3,7 @@
 	/* display: flex; */
 	width: 300px;
 	flex: 1;
-	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 :local(.tab) {
