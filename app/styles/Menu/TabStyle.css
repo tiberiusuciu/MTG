@@ -31,6 +31,7 @@
 
 :local(.chatLogUsername) {
   font-weight: bold;
+  font-size: 15px;
 }
 
 :local(.chatLogMessage) {
