@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 // import 'react-tabs/style/react-tabs.css'
 
-import ActionTab from './Tabs/ActionTab';
+// import ActionTab from './Tabs/ActionTab';
 import HandTab from './Tabs/HandTab';
 import ChatTab from './Tabs/ChatTab';
 import GameTab from './Tabs/GameTab';
