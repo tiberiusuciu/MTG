@@ -6,6 +6,7 @@ import ActionTab from './Tabs/ActionTab';
 import HandTab from './Tabs/HandTab';
 import ChatTab from './Tabs/ChatTab';
 import GameTab from './Tabs/GameTab';
+import HelpTab from './Tabs/HelpTab';
 import styles from '../../styles/Menu/MenuTools.css';
 
 class MenuTools extends Component {
@@ -13,14 +14,13 @@ class MenuTools extends Component {
 		return (
 			<div className={styles.menuTools}>
 				<div className={styles.header}>
-					<div className={styles.tab + " " + styles.active}>Stats</div>
+					<div className={styles.tab + " " + styles.active}>Game</div>
 					<div className={styles.tab}>Hand</div>
 					<div className={styles.tab}>Chat</div>
-					<div className={styles.tab}>Menu</div>
-					<div className={styles.tab}>Action</div>
+					<div className={styles.tab}>Help</div>
 				</div>
 				<div className={styles.content}>
-					<GameTab />
+					<HandTab />
 				</div>
 
 			</div>
@@ -31,6 +31,7 @@ class MenuTools extends Component {
 export default MenuTools;
 // <HandTab/>
 // <ChatTab/>
+// <GameTab/>
 
 // <Tabs className={styles.dimensions}>
 // 	<TabList className={styles.fontSize}>
