@@ -20,7 +20,7 @@ class MenuTools extends Component {
 					<div className={styles.tab}>Help</div>
 				</div>
 				<div className={styles.content}>
-					<HandTab />
+					<HelpTab />
 				</div>
 
 			</div>
