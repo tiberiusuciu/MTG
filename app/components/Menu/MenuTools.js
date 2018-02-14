@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import ActionTab from './Tabs/ActionTab';
 import HandTab from './Tabs/HandTab';
 import ChatTab from './Tabs/ChatTab';
-import StatsTab from './Tabs/StatsTab';
+import GameTab from './Tabs/GameTab';
 import styles from '../../styles/Menu/MenuTools.css';
 
 class MenuTools extends Component {
@@ -20,7 +20,7 @@ class MenuTools extends Component {
 					<div className={styles.tab}>Action</div>
 				</div>
 				<div className={styles.content}>
-					<StatsTab />
+					<GameTab />
 				</div>
 
 			</div>

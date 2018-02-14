@@ -45,7 +45,7 @@
 }
 
 :local(.timer) {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: #333;
   display: block;
   color: white;
@@ -53,4 +53,28 @@
   height: 58px;
   line-height: 59px;
   text-align: center;
+}
+
+:local(.PlayerName) {
+  padding-left: 13px;
+  display: inline-block;
+  text-align: left;
+  width: 150px;
+}
+
+:local(.PlayerStats) {
+  text-align: right;
+  display: inline-block;
+  width: 150px;
+  padding-right: 13px;
+}
+
+:local(.SurrenderButton) {
+  width: 300px;
+  text-align: center;
+  height: 50px;
+  line-height: 47px;
+}
+:local(.SurrenderButton button) {
+  width: 275px;
 }
