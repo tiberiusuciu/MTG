@@ -39,5 +39,5 @@
 :local(.next:hover) {
 	background-color: #EEE;
 	cursor: pointer;
-	font-weight: bold;
+	/* font-weight: bold; */
 }

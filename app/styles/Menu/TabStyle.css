@@ -43,3 +43,14 @@
   font-weight: lighter;
   font-size: 11px;
 }
+
+:local(.timer) {
+  margin-top: 20px;
+  background-color: #333;
+  display: block;
+  color: white;
+  font-weight: bolder;
+  height: 58px;
+  line-height: 59px;
+  text-align: center;
+}

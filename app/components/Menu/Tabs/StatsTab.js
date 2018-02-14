@@ -6,7 +6,7 @@ class StatsTab extends Component {
 	render() {
 		return (
 			<div className={styles.tabLayout}>
-        <h1>Stats tab</h1>
+        <div className={styles.timer}>00:00:00</div>
 			</div>
 		)
 	}
