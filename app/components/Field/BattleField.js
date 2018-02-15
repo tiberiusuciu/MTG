@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
+import FieldCard from './FieldCard';
+
 import styles from '../../styles/Field/BattleField.css';
 
-class PlayerBox extends Component {
+class BattleField extends Component {
 	render() {
 		return (
 			<div className={styles.BattleField}>
-				<p>Battlefield</p>
+				<FieldCard />
 			</div>
 		)
 	}
 };
 
-export default PlayerBox;
+export default BattleField;
