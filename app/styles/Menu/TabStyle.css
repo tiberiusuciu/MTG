@@ -78,3 +78,7 @@
 :local(.SurrenderButton button) {
   width: 274px;
 }
+
+:local(.helpBox) {
+  padding: 20px;
+}

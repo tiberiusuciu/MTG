@@ -5,7 +5,7 @@ import styles from '../../../styles/Menu/TabStyle.css';
 class HelpTab extends Component {
 	render() {
 		return (
-			<div className={styles.tabLayout}>
+			<div className={styles.tabLayout + " " + styles.helpBox}>
         <p>This is the help tab!</p>
         <p>Don't panic! We have everything you need to know, otherwise let us know!</p>
         <p>The Game tab provides you the following:</p>
