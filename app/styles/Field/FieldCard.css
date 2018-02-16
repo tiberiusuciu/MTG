@@ -3,4 +3,8 @@
 	/* margin: 4px 13px; */
 	height: 100px;
 	width: 71px;
+	/* border: 2px solid black; */
+	/* border-radius: 5px; */
+	/* user-select: none; */
+	pointer-events: none;
 }
