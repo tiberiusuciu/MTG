@@ -32,3 +32,4 @@ class FieldCard extends Component {
 };
 
 export default FieldCard;
+// styles.cardActive

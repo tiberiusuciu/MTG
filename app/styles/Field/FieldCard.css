@@ -8,3 +8,7 @@
 	/* user-select: none; */
 	pointer-events: none;
 }
+
+:local(.cardActive) {
+	border: 2px solid lime;
+}
