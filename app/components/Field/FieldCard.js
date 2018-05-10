@@ -19,7 +19,6 @@ class FieldCard extends Component {
         defaultPosition={{x: 0, y: 24}}
         position={null}
         grid={[71, 100]}
-				bounds={{top: 24, left: 0, bottom: 324}}
         onStart={this.handleStart}
         onDrag={this.handleDrag}
         onStop={this.handleStop}>
@@ -32,4 +31,5 @@ class FieldCard extends Component {
 };
 
 export default FieldCard;
+// bounds={{top: 24, left: 0, bottom: 324}}
 // styles.cardActive
