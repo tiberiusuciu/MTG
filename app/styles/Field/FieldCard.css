@@ -11,4 +11,9 @@
 
 :local(.cardActive) {
 	border: 2px solid lime;
+	width: 75px;
+}
+
+:local(.fieldCardPositionning) {
+	display: inline-block !important;
 }

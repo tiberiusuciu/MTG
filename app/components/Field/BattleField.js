@@ -9,6 +9,8 @@ class BattleField extends Component {
 		return (
 			<div className={styles.BattleField}>
 				<FieldCard />
+				<FieldCard />
+				<FieldCard />
 			</div>
 		)
 	}
