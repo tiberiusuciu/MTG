@@ -7,6 +7,15 @@
 	/* border-radius: 5px; */
 	/* user-select: none; */
 	pointer-events: none;
+	height: 100px;
+  position: relative;
+  background-color: red;
+  width: 71px;
+  display: inline-block;
+  background: url("https://magiccards.info/scans/en/nph/9.jpg");
+	background-color: gold;
+  background-position: -40px -22px;
+  background-size: 150px 220px;
 }
 
 :local(.cardActive) {

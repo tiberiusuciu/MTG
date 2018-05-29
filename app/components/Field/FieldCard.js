@@ -23,7 +23,7 @@ class FieldCard extends Component {
         onDrag={this.handleDrag}
         onStop={this.handleStop}>
 				<div className={"handle " + styles.fieldCardPositionning}>
-					<img className={styles.card} src="https://magiccards.info/scans/en/nph/9.jpg" />
+					<div className={styles.card}></div>
 				</div>
 			</Draggable>
 		)
