@@ -47,3 +47,7 @@
   border: 1px solid royalblue;
   border-radius: 50%;
 }
+
+:local(.tapped) {
+	transform: rotate(90deg);
+}

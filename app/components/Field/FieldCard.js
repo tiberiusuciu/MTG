@@ -16,13 +16,13 @@ class FieldCard extends Component {
 			<Draggable
         axis="both"
         handle=".handle"
-        defaultPosition={{x: 0, y: 24}}
+        defaultPosition={{x: 24, y: 24}}
         position={null}
         grid={[71, 100]}
         onStart={this.handleStart}
         onDrag={this.handleDrag}
         onStop={this.handleStop}
-				bounds={{top: 24, left: 0, bottom: 324}}>
+				bounds={{top: 24, left: 24, bottom: 324}}>
 				<div className={"handle " + styles.fieldCardPositionning}>
 					<div className={styles.card}></div>
 				</div>
@@ -34,6 +34,7 @@ class FieldCard extends Component {
 export default FieldCard;
 // bounds={{top: 24, left: 0, bottom: 324}}
 // styles.cardActive
+//  + styles.tapped
 
 // <div className={"handle " + styles.fieldCardPositionning}>
 // 	<div className={styles.card}></div>
