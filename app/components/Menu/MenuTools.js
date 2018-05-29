@@ -11,6 +11,8 @@ import styles from '../../styles/Menu/MenuTools.css';
 
 class MenuTools extends Component {
 	handleClick(e, args) {
+		console.log("E", e);
+		console.log("ARGS", args);
 		console.log("HELLO!");
 	}
 
@@ -18,10 +20,10 @@ class MenuTools extends Component {
 		return (
 			<div className={styles.menuTools}>
 				<div className={styles.header}>
-					<div className={styles.tab + " " + styles.active} onClick={this.handleClick}>Game</div>
-					<div className={styles.tab} onClick={this.handleClick}>Hand</div>
-					<div className={styles.tab} onClick={this.handleClick}>Chat</div>
-					<div className={styles.tab} onClick={this.handleClick}>Help</div>
+					<div className={styles.tab + " " + styles.active} onClick={() => {this.handleClick("Game")}}>Game</div>
+					<div className={styles.tab} onClick={() => {this.handleClick("Hand")}}>Hand</div>
+					<div className={styles.tab} onClick={() => {this.handleClick("Chat")}}>Chat</div>
+					<div className={styles.tab} onClick={() => {this.handleClick("Help")}}>Help</div>
 				</div>
 				<div className={styles.content}>
 					<HelpTab />
