@@ -21,7 +21,8 @@ class FieldCard extends Component {
         grid={[71, 100]}
         onStart={this.handleStart}
         onDrag={this.handleDrag}
-        onStop={this.handleStop}>
+        onStop={this.handleStop}
+				bounds={{top: 24, left: 0, bottom: 324}}>
 				<div className={"handle " + styles.fieldCardPositionning}>
 					<div className={styles.card}></div>
 				</div>

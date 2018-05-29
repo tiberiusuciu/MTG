@@ -11,6 +11,12 @@ class BattleField extends Component {
 				<FieldCard />
 				<FieldCard />
 				<FieldCard />
+				<FieldCard />
+				<FieldCard />
+				<FieldCard />
+				<FieldCard />
+				<FieldCard />
+				<FieldCard />
 			</div>
 		)
 	}
