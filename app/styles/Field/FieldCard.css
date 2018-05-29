@@ -51,3 +51,19 @@
 :local(.tapped) {
 	transform: rotate(90deg);
 }
+
+:local(.counter) {
+	width: 28px;
+	height: 28px;
+	color: white;
+	text-align: center;
+	background-color: crimson;
+	border-radius: 150px;
+	margin-left: 5px;
+	margin-top: 5px;
+  display: inline-block;
+}
+
+:local(.counterText) {
+	margin-top: 2px;
+}

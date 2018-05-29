@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // import FieldCard from './FieldCard';
 import Draggable from 'react-draggable';
+import Counter from './Counter';
 
 import styles from '../../styles/Field/FieldCard.css';
 
@@ -24,7 +25,9 @@ class FieldCard extends Component {
         onStop={this.handleStop}
 				bounds={{top: 24, left: 24, bottom: 324}}>
 				<div className={"handle " + styles.fieldCardPositionning}>
-					<div className={styles.card}></div>
+					<div className={styles.card}>
+
+					</div>
 				</div>
 			</Draggable>
 		)
@@ -35,6 +38,8 @@ export default FieldCard;
 // bounds={{top: 24, left: 0, bottom: 324}}
 // styles.cardActive
 //  + styles.tapped
+
+// <Counter/>
 
 // <div className={"handle " + styles.fieldCardPositionning}>
 // 	<div className={styles.card}></div>
