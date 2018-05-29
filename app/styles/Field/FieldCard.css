@@ -27,3 +27,23 @@
 	position: absolute;
 	height: 104px;
 }
+
+:local(.backCard) {
+	position: absolute;
+	height: 100px;
+	width: 71px;
+	background-color: #830;
+	border: 2px solid white;
+	border-radius: 4px;
+}
+
+:local(.backCircle) {
+	position: absolute;
+  height: 90px;
+  width: 61px;
+  margin-left: 3px;
+  margin-top: 3px;
+  background-color: #D80;
+  border: 1px solid royalblue;
+  border-radius: 50%;
+}

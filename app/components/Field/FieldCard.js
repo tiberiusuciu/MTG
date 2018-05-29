@@ -34,3 +34,11 @@ class FieldCard extends Component {
 export default FieldCard;
 // bounds={{top: 24, left: 0, bottom: 324}}
 // styles.cardActive
+
+// <div className={"handle " + styles.fieldCardPositionning}>
+// 	<div className={styles.card}></div>
+// </div>
+
+// <div className={"handle " + styles.fieldCardPositionning + " " + styles.backCard}>
+// 	<div className={styles.backCircle}></div>
+// </div>
