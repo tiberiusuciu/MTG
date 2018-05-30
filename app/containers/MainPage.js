@@ -1,11 +1,10 @@
 import MainPage from '../components/MainPage';
 import { connect } from 'react-redux';
-import Parser from '../modules/parser';
 // import Oracle from '../modules/oracle';
 
 import {
 	setUserCurrentInput, submitCurrentInput, newLogEntry,
-	sendCommand, invalidCommand,
+	sendCommand, invalidCommand, changeFocusedTab,
 } from '../actions';
 
 const _parser = (username, userCurrentInput) => {
@@ -15,10 +14,9 @@ const _parser = (username, userCurrentInput) => {
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		userCurrentInput: state.userCurrentInput,
-		userInputHistory: state.userInputHistory,
-		user: state.user,
-		logs: state.logs,
+		users: state.users,
+		game: state.game,
+		client: state.client,
 		// referredId: ownProps.location.query.referredId,
 	};
 };
@@ -47,6 +45,9 @@ const mapDispatchToProps = (dispatch) => {
 					dispatch(invalidCommand(parsedCommand));
 				}
 			}
+		},
+		onTabFocusedChange: (focusedTab) => {
+			dispatch(changeFocusedTab(focusedTab));
 		},
 	};
 };

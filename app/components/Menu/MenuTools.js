@@ -10,23 +10,49 @@ import HelpTab from './Tabs/HelpTab';
 import styles from '../../styles/Menu/MenuTools.css';
 
 class MenuTools extends Component {
-	handleClick(e, args) {
-		console.log("E", e);
-		console.log("ARGS", args);
-		console.log("HELLO!");
+	handleClick(selectedTab) {
+		this.props.onTabFocusedChange(selectedTab);
+	}
+
+	renderFocusedTab() {
+		switch (this.props.focusedTab) {
+			case "Hand":
+				return (<HandTab/>)
+				break;
+			case "Chat":
+				return (<ChatTab/>)
+				break;
+			case "Help":
+				return (<HelpTab/>)
+				break;
+			case "Game":
+			default:
+				return (<GameTab/>)
+				break;
+
+		}
+	}
+
+	addActive(requestedTab) {
+		if (requestedTab == this.props.focusedTab) {
+			return styles.active;
+		}
+		return "";
 	}
 
 	render() {
 		return (
 			<div className={styles.menuTools}>
 				<div className={styles.header}>
-					<div className={styles.tab + " " + styles.active} onClick={() => {this.handleClick("Game")}}>Game</div>
-					<div className={styles.tab} onClick={() => {this.handleClick("Hand")}}>Hand</div>
-					<div className={styles.tab} onClick={() => {this.handleClick("Chat")}}>Chat</div>
-					<div className={styles.tab} onClick={() => {this.handleClick("Help")}}>Help</div>
+					<div className={styles.tab + " " + this.addActive("Game")} onClick={() => {this.handleClick("Game")}}>Game</div>
+					<div className={styles.tab + " " + this.addActive("Hand")} onClick={() => {this.handleClick("Hand")}}>Hand</div>
+					<div className={styles.tab + " " + this.addActive("Chat")} onClick={() => {this.handleClick("Chat")}}>Chat</div>
+					<div className={styles.tab + " " + this.addActive("Help")} onClick={() => {this.handleClick("Help")}}>Help</div>
 				</div>
 				<div className={styles.content}>
-					<HelpTab />
+					{
+						this.renderFocusedTab()
+					}
 				</div>
 
 			</div>

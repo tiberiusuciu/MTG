@@ -6,10 +6,6 @@ module.exports = {
 		SEND_COMMAND: 'SEND_COMMAND',
 		INVALID_COMMAND: 'INVALID_COMMAND',
 		NEW_USER: 'NEW_USER',
+		FOCUS_TAB: 'FOCUS_TAB',
 	},
-	commandNames: {
-		EAT: 'eat',
-		SAY: 'say',
-		CLEAR: 'clear',
-	}
 }

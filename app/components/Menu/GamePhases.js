@@ -6,7 +6,7 @@ class GamePhases extends Component {
 	render() {
 		return (
 			<div className={styles.GamePhases}>
-        <div className={styles.phase + " " + styles.title}>Untap</div>
+        <div className={styles.phase + " " + styles.title}>{this.props.currentTurn}</div>
         <div className={styles.phase + " " + styles.next}>Next Phase</div>
 			</div>
 		)

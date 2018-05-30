@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import MenuBox from './Menu/MenuBox';
 import CardField from './Field/CardField';
-// import HandBox from './Menu/HandBox';
 
 import styles from '../styles/MainPage.css';
 
@@ -13,10 +12,10 @@ class MainPage extends Component {
 				<div className={styles.MainPageLayout}>
 					<div className={styles.HorizontalLayout}>
 						<div className={styles.MenuBox}>
-							<MenuBox />
+							<MenuBox game={this.props.game} users={this.props.users} client={this.props.client} onTabFocusedChange={this.props.onTabFocusedChange}/>
 						</div>
 						<div className={styles.CardField}>
-							<CardField />
+							<CardField game={this.props.game} users={this.props.users} />
 						</div>
 					</div>
 				</div>
@@ -24,26 +23,5 @@ class MainPage extends Component {
 		)
 	}
 };
-
-/*
-<div className={styles.TerminalLayout + " col-xs-8"}>
-	<TerminalBox
-		onUserCurrentInput={this.props.onUserCurrentInput}
-		userCurrentInput={this.props.userCurrentInput}
-		onSubmitCurrentInput={this.props.onSubmitCurrentInput}
-		userInputHistory={this.props.userInputHistory}
-		user={this.props.user}
-		logs={this.props.logs}
-	/>
-</div>
-<div className={styles.InformationLayout + " col-xs-4"}>
-	<div className={styles.CanvasLayout}>
-		Test Canvas
-	</div>
-	<div className={styles.DetailsBox}>
-		Test Details
-	</div>
-</div>
-*/
 
 export default MainPage;

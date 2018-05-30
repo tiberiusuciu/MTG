@@ -7,8 +7,9 @@ import { merge } from 'lodash';
 // import config from '../config.js';
 
 // Reducers
-import terminalBoxReducer from './terminalBoxReducer.js';
-import userReducer from './userReducer.js';
+import game from './game.js';
+import users from './users.js';
+import client from './client.js';
 
 function entities(state = { usage:0 }, action) {
 	if (action.response && action.response.entities) {
@@ -32,6 +33,7 @@ function entities(state = { usage:0 }, action) {
 export default combineReducers({
 	routing,
 	entities,
-	...terminalBoxReducer,
-	...userReducer,
+	...game,
+	...users,
+	...client,
 });
