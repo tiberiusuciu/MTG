@@ -10,6 +10,7 @@ class CardField extends Component {
 			return (
 				<div className={styles.PlayerBox}>
 					<PlayerBox user={user}/>
+					<div className={styles.Separator}></div>
 				</div>
 			)
 		})

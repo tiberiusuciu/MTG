@@ -12,8 +12,8 @@ class FieldCard extends Component {
 	    console.log('Data: ', data);
 	}
 
-	handleHover() {
-		console.log("AYYY");
+	handleHover(cardLink) {
+		console.log("AYYY", cardLink);
 	}
 
 	render() {
@@ -28,8 +28,8 @@ class FieldCard extends Component {
         onDrag={this.handleDrag}
         onStop={this.handleStop}
 				bounds={{top: 24, left: 24, bottom: 324}}>
-				<div className={"handle " + styles.fieldCardPositionning} onMouseOver={this.handleHover}>
-					<div className={styles.card}>
+				<div className={"handle " + styles.fieldCardPositionning} onMouseOver={() => {this.handleHover(this.props.cardLink)}}>
+					<div style={{backgroundImage: "url(" + this.props.cardLink + ")"}} className={styles.card}>
 
 					</div>
 				</div>

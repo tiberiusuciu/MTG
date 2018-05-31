@@ -136,7 +136,7 @@ const users = (state = [
         "types": [
           "Creature"
         ],
-				"MTG_SELECTED_TYPE": "NPH",
+				"MTG_SELECTED_TYPE": "nph",
       },
 			{
         "artist": "Mark Tedin",
@@ -230,7 +230,7 @@ const users = (state = [
         "types": [
           "Creature"
         ],
-				"MTG_SELECTED_TYPE": "ROE",
+				"MTG_SELECTED_TYPE": "roe",
       },
 			{
         "artist": "Drew Tucker",
@@ -345,7 +345,7 @@ const users = (state = [
         "types": [
           "Creature"
         ],
-				"MTG_SELECTED_TYPE": "EVE",
+				"MTG_SELECTED_TYPE": "eve",
       },
 		]
 	},
@@ -495,7 +495,7 @@ const users = (state = [
 		        "types": [
 		          "Planeswalker"
 		        ],
-						"MTG_SELECTED_TYPE": "ROE",
+						"MTG_SELECTED_TYPE": "roe",
 		      	}
 				],
 			},
