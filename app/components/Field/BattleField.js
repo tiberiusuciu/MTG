@@ -10,7 +10,7 @@ class BattleField extends Component {
 		return this.props.user.battlefield.map((card) => {
 			var cardLink = "https://magiccards.info/scans/en/" + card.MTG_SELECTED_TYPE + "/" + card.number + ".jpg";
 			return (
-				<FieldCard card={card} cardLink={cardLink} />
+				<FieldCard card={card} cardLink={cardLink} onCardFocus={this.props.onCardFocus}/>
 			);
 		});
 	}

@@ -10,7 +10,7 @@ class PlayerBox extends Component {
 		return (
 			<div className={styles.PlayerBox}>
 				<PlayerInfo user={this.props.user} />
-				<BattleField user={this.props.user} />
+				<BattleField user={this.props.user} onCardFocus={this.props.onCardFocus} />
 			</div>
 		)
 	}

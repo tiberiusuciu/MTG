@@ -14,6 +14,7 @@ class FieldCard extends Component {
 
 	handleHover(cardLink) {
 		console.log("AYYY", cardLink);
+		this.props.onCardFocus(cardLink);
 	}
 
 	render() {

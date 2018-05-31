@@ -1,6 +1,7 @@
 import {
 	NEW_USER,
   FOCUS_TAB,
+	FOCUS_CARD,
 } from '../actions';
 
 const client = (state = {
@@ -13,7 +14,12 @@ const client = (state = {
       return {
         ...state,
         focusedTab: action.focusedTab,
-      }
+      };
+		case FOCUS_CARD:
+			return {
+				...state,
+				focusedCard: action.focusedCard,
+			};
 		default:
 			return state;
 	}
