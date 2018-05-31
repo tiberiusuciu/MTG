@@ -14,10 +14,23 @@ class MenuTools extends Component {
 		this.props.onTabFocusedChange(selectedTab);
 	}
 
+	getClientUser() {
+		var user = null;
+		console.log("USERS ", this.props.users);
+		console.log("CLIENT", this.props.client);
+		for (var i = 0; i < this.props.users.length; i++) {
+			if (this.props.users[i].id == this.props.client.userID) {
+				user = this.props.users[i];
+			}
+		}
+		return user;
+	}
+
 	renderFocusedTab() {
 		switch (this.props.focusedTab) {
 			case "Hand":
-				return (<HandTab/>)
+				var user = this.getClientUser();
+				return (<HandTab user={user} onCardFocus={this.props.onCardFocus}/>)
 				break;
 			case "Chat":
 				return (<ChatTab/>)
