@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import {
 	setUserCurrentInput, submitCurrentInput, newLogEntry,
 	sendCommand, invalidCommand, changeFocusedTab,
-	changeFocusedCard,
+	changeFocusedCard, requestCardToHand,
 } from '../actions';
 
 const _parser = (username, userCurrentInput) => {
@@ -53,6 +53,10 @@ const mapDispatchToProps = (dispatch) => {
 
 		onCardFocus: (focusedCard) => {
 			dispatch(changeFocusedCard(focusedCard));
+		},
+
+		onRequestCardToHand: (amount, who) => {
+			dispatch(requestCardToHand(amount, who));
 		},
 	};
 };

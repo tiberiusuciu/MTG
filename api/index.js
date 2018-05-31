@@ -44,6 +44,10 @@ io.on('connection', function (socket) {
 			case config.actionConst.SEND_COMMAND:
 				let response = game.commandReceived(action.parsedCommand);
 				io.emit('action', response);
+        break;
+      case config.actionConst.ASK_FOR_CARD:
+        console.log("GREETINGS FROM THE SERVER!");
+        break;
 		}
 	})
 

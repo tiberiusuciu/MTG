@@ -3,9 +3,15 @@ import React, { Component } from 'react';
 import styles from '../../../styles/Field/Piles/DeckPile.css';
 
 class DeckPile extends Component {
+	requestCard(amount) {
+		if (this.props.user.id == this.props.client.userID) {
+			this.props.onRequestCardToHand(amount, this.props.client.userID);
+		}
+	}
+
 	render() {
 		return (
-			<div className={styles.DeckPile}>
+			<div className={styles.DeckPile} onDoubleClick={()=> {this.requestCard(1)}}>
 				<div className={styles.backCard}>
 					<div className={styles.backCircle}></div>
 				</div>
@@ -16,16 +22,3 @@ class DeckPile extends Component {
 };
 
 export default DeckPile;
-
-//<img src="https://magiccards.info/scans/en/nph/9.jpg" className={styles.deckCard} />
-//<div className={styles.emptyPile}></div>
-
-// <div className={styles.backCard}>
-// 	<div className={styles.backCircle}></div>
-// </div>
-
-
-
-// <div className={styles.deckCard}>
-// 	card
-// </div>

@@ -16,8 +16,6 @@ class MenuTools extends Component {
 
 	getClientUser() {
 		var user = null;
-		console.log("USERS ", this.props.users);
-		console.log("CLIENT", this.props.client);
 		for (var i = 0; i < this.props.users.length; i++) {
 			if (this.props.users[i].id == this.props.client.userID) {
 				user = this.props.users[i];

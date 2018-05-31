@@ -15,7 +15,7 @@ class MainPage extends Component {
 							<MenuBox game={this.props.game} users={this.props.users} client={this.props.client} onTabFocusedChange={this.props.onTabFocusedChange} onCardFocus={this.props.onCardFocus}/>
 						</div>
 						<div className={styles.CardField}>
-							<CardField game={this.props.game} users={this.props.users} onCardFocus={this.props.onCardFocus}/>
+							<CardField game={this.props.game} users={this.props.users} client={this.props.client} onCardFocus={this.props.onCardFocus} onRequestCardToHand={this.props.onRequestCardToHand}/>
 						</div>
 					</div>
 				</div>

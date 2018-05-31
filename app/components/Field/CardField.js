@@ -9,7 +9,7 @@ class CardField extends Component {
 		return this.props.users.map((user) => {
 			return (
 				<div className={styles.PlayerBox}>
-					<PlayerBox user={user} onCardFocus={this.props.onCardFocus}/>
+					<PlayerBox user={user} client={this.props.client} onCardFocus={this.props.onCardFocus} onRequestCardToHand={this.props.onRequestCardToHand}/>
 					<div className={styles.Separator}></div>
 				</div>
 			)

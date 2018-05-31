@@ -11,9 +11,9 @@ class PlayerPiles extends Component {
 	render() {
 		return (
 			<div className={styles.PlayerPiles}>
-				<DeckPile />
-				<GraveyardPile />
-				<ExilePile />
+				<DeckPile user={this.props.user} client={this.props.client} onRequestCardToHand={this.props.onRequestCardToHand} />
+				<GraveyardPile user={this.props.user} client={this.props.client} />
+				<ExilePile user={this.props.user} client={this.props.client} />
 			</div>
 		)
 	}

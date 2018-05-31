@@ -1,14 +1,10 @@
 import { history } from '../services';
 import config from '../../config.js';
 
-export const SET_USER_CURRENT_INPUT = config.actionConst.SET_USER_CURRENT_INPUT;
-export const SUBMIT_USER_INPUT = config.actionConst.SUBMIT_USER_INPUT;
-export const NEW_LOG_ENTRY = config.actionConst.NEW_LOG_ENTRY;
-export const SEND_COMMAND = config.actionConst.SEND_COMMAND;
-export const INVALID_COMMAND = config.actionConst.INVALID_COMMAND;
 export const NEW_USER = config.actionConst.NEW_USER;
 export const FOCUS_TAB = config.actionConst.FOCUS_TAB;
 export const FOCUS_CARD = config.actionConst.FOCUS_CARD;
+export const ASK_FOR_CARD = config.actionConst.ASK_FOR_CARD;
 
 function action(type, payload = {}) {
 	return { type, ...payload };
@@ -107,3 +103,4 @@ export const sendCommand = (parsedCommand) => action(SEND_COMMAND, {parsedComman
 export const invalidCommand = (parsedCommand) => action(INVALID_COMMAND, {parsedCommand});
 export const changeFocusedTab = (focusedTab) => action(FOCUS_TAB, {focusedTab});
 export const changeFocusedCard = (focusedCard) => action(FOCUS_CARD, {focusedCard});
+export const requestCardToHand = (amount, who) => action(ASK_FOR_CARD, {amount, who, meta: {remote: true}});

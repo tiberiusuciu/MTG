@@ -8,5 +8,6 @@ module.exports = {
 		NEW_USER: 'NEW_USER',
 		FOCUS_TAB: 'FOCUS_TAB',
 		FOCUS_CARD: 'FOCUS_CARD',
+		ASK_FOR_CARD: 'ASK_FOR_CARD',
 	},
 }
