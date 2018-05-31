@@ -5,17 +5,23 @@ import PlayerBox from './PlayerBox';
 import styles from '../../styles/Field/CardField.css';
 
 class CardField extends Component {
+	generatePlayerFields() {
+		return this.props.users.map((user) => {
+			return (
+				<div className={styles.PlayerBox}>
+					<PlayerBox user={user}/>
+				</div>
+			)
+		})
+	}
+
 	render() {
 		return (
 			<div className={styles.cardField}>
         <div className={styles.dimensions}>
-          <div className={styles.PlayerBox}>
-            <PlayerBox />
-          </div>
-					<div className={styles.Separator}></div>
-          <div className={styles.PlayerBox}>
-            <PlayerBox />
-          </div>
+					{
+						this.generatePlayerFields()
+					}
         </div>
 			</div>
 		)

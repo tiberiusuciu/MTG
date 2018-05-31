@@ -7,5 +7,6 @@ module.exports = {
 		INVALID_COMMAND: 'INVALID_COMMAND',
 		NEW_USER: 'NEW_USER',
 		FOCUS_TAB: 'FOCUS_TAB',
+		FOCUS_CARD: 'FOCUS_CARD',
 	},
 }

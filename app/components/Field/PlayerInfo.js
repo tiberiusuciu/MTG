@@ -10,7 +10,7 @@ class PlayerInfo extends Component {
 	render() {
 		return (
 			<div className={styles.PlayerInfo}>
-				<PlayerPicture />
+				<PlayerPicture user={this.props.user}/>
 				<div className={styles.QuicktoolsArea}>
 					<PlayerCountersList />
 					<PlayerPiles />

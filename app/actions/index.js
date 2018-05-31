@@ -8,6 +8,7 @@ export const SEND_COMMAND = config.actionConst.SEND_COMMAND;
 export const INVALID_COMMAND = config.actionConst.INVALID_COMMAND;
 export const NEW_USER = config.actionConst.NEW_USER;
 export const FOCUS_TAB = config.actionConst.FOCUS_TAB;
+export const FOCUS_CARD = config.actionConst.FOCUS_CARD;
 
 function action(type, payload = {}) {
 	return { type, ...payload };
@@ -105,3 +106,4 @@ export const newLogEntry = (source, content, coloration) => action(NEW_LOG_ENTRY
 export const sendCommand = (parsedCommand) => action(SEND_COMMAND, {parsedCommand, meta: {remote: true}});
 export const invalidCommand = (parsedCommand) => action(INVALID_COMMAND, {parsedCommand});
 export const changeFocusedTab = (focusedTab) => action(FOCUS_TAB, {focusedTab});
+export const changeFocusedCard = (focusedCard) => action(FOCUS_CARD, {focusedCard});

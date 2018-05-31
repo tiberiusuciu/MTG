@@ -9,8 +9,8 @@ class PlayerBox extends Component {
 	render() {
 		return (
 			<div className={styles.PlayerBox}>
-				<PlayerInfo />
-				<BattleField />
+				<PlayerInfo user={this.props.user} />
+				<BattleField user={this.props.user} />
 			</div>
 		)
 	}
