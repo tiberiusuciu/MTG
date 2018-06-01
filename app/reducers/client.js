@@ -2,12 +2,13 @@ import {
 	NEW_USER,
   FOCUS_TAB,
 	FOCUS_CARD,
+	CLIENT_CONNECT,
 } from '../actions';
 
 const client = (state = {
 	userID: 0,
   focusedTab: "Hand",
-  focusedCard: "https://magiccards.info/scans/en/nph/9.jpg",
+  focusedCard: "https://img.scryfall.com/cards/large/en/nph/9.jpg",
 }, action) => {
 	switch (action.type) {
     case FOCUS_TAB:
@@ -19,6 +20,12 @@ const client = (state = {
 			return {
 				...state,
 				focusedCard: action.focusedCard,
+			};
+		case CLIENT_CONNECT:
+			console.log("ASSIGNGING NEW STUFF", action);
+			return {
+				...state,
+				userID: action.clientID,
 			};
 		default:
 			return state;

@@ -5,6 +5,8 @@ export const NEW_USER = config.actionConst.NEW_USER;
 export const FOCUS_TAB = config.actionConst.FOCUS_TAB;
 export const FOCUS_CARD = config.actionConst.FOCUS_CARD;
 export const ASK_FOR_CARD = config.actionConst.ASK_FOR_CARD;
+export const CLIENT_CONNECT = config.actionConst.CLIENT_CONNECT;
+export const USERS_UPDATE = config.actionConst.USERS_UPDATE;
 
 function action(type, payload = {}) {
 	return { type, ...payload };

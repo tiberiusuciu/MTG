@@ -8,7 +8,7 @@ class BattleField extends Component {
 
 	displayCards() {
 		return this.props.user.battlefield.map((card) => {
-			var cardLink = "https://magiccards.info/scans/en/" + card.MTG_SELECTED_TYPE + "/" + card.number + ".jpg";
+			var cardLink = "https://img.scryfall.com/cards/large/en/" + card.MTG_SELECTED_TYPE + "/" + card.number + ".jpg";
 			return (
 				<FieldCard card={card} cardLink={cardLink} onCardFocus={this.props.onCardFocus}/>
 			);

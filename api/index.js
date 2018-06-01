@@ -36,8 +36,9 @@ var game = new Game();
 io.on('connection', function (socket) {
 
 	// Making new user here
-	let user = game.addUser('unknown');
-	socket.emit('action', {type: config.actionConst.NEW_USER, user});
+	let clientID = game.addUser('unknown');
+	io.emit('action', {type: config.actionConst.NEW_USER, users: game.getUsers()});
+  socket.emit('action', {type: config.actionConst.CLIENT_CONNECT, clientID })
 
 	socket.on("action", function (action) {
 		switch (action.type) {
@@ -46,7 +47,8 @@ io.on('connection', function (socket) {
 				io.emit('action', response);
         break;
       case config.actionConst.ASK_FOR_CARD:
-        console.log("GREETINGS FROM THE SERVER!");
+        var users = game.drawCard(action.amount, action.who);
+        io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
         break;
 		}
 	})
