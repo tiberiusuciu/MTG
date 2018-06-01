@@ -8,7 +8,7 @@ import {
 const client = (state = {
 	userID: 0,
   focusedTab: "Hand",
-  focusedCard: "https://img.scryfall.com/cards/large/en/nph/9.jpg",
+  focusedCard: "https://deckmaster.info/images/cards/MPS_AKH/429860-hr.jpg",
 }, action) => {
 	switch (action.type) {
     case FOCUS_TAB:

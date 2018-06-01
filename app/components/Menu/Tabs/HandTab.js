@@ -8,7 +8,7 @@ class HandTab extends Component {
 
 	generateCards() {
 		return this.props.user.hand.map((card) => {
-			var cardLink = "https://img.scryfall.com/cards/large/en/" + card.MTG_SELECTED_TYPE + "/" + card.number + ".jpg";
+			var cardLink = "https://deckmaster.info/images/cards/" + card.multiverseid + ".jpg"
 			return (
 				<HandCard cardInfo={card} cardLink={cardLink} onCardFocus={this.props.onCardFocus} />
 			)

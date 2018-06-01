@@ -7,7 +7,7 @@ const users = (state = [
 	{
 		id: 0,
 		username: "Chris",
-		picture: "https://magiccards.info/scans/en/nph/9.jpg",
+		picture: "https://deckmaster.info/images/cards/DDP/401706.jpg",
 		counters: {
 			life: 20,
 			poison: 0,

@@ -27,33 +27,38 @@ Game.prototype.getUsers = function() {
 Game.prototype.drawCard = function(amount, who) {
 	var cards = [];
 	for (var i = 0; i < amount; i++) {
-		var ran_set = this.obj_keys_sets[Math.floor(Math.random() * this.obj_keys_sets.length)];
-		var set = MTGJSON[ran_set];
-		// var foundElligibleSet = false;
-		// while (!foundElligibleSet) {
-		// 	console.log("LOOPING");
-		// 	console.log("HERE IS THE CURRENT SET", set.code.toLowerCase());
-		// 	if(_.indexOf(setsToOmit.sets, set.code.toLowerCase()) > -1) {
-		// 		var ran_set = this.obj_keys_sets[Math.floor(Math.random() * this.obj_keys_sets.length)];
-		// 		var set = MTGJSON[ran_set];
-		// 		foundElligibleSet = false;
-		// 	}
-		// 	else {
-		// 		foundElligibleSet = true;
-		// 	}
-		// }
-		var set_code = set.code.toLowerCase();
-		var card = set.cards[Math.floor(Math.random() * set.cards.length)];
-		card.MTG_SELECTED_TYPE = set_code;
-		cards[cards.length] = card;
-
-		// console.log("CARD:", card);
+		var found = false;
+		while (!found) {
+			var ran_set = this.obj_keys_sets[Math.floor(Math.random() * this.obj_keys_sets.length)];
+			var set = MTGJSON[ran_set];
+			// var foundElligibleSet = false;
+			// while (!foundElligibleSet) {
+			// 	console.log("LOOPING");
+			// 	console.log("HERE IS THE CURRENT SET", set.code.toLowerCase());
+			// 	if(_.indexOf(setsToOmit.sets, set.code.toLowerCase()) > -1) {
+			// 		var ran_set = this.obj_keys_sets[Math.floor(Math.random() * this.obj_keys_sets.length)];
+			// 		var set = MTGJSON[ran_set];
+			// 		foundElligibleSet = false;
+			// 	}
+			// 	else {
+			// 		foundElligibleSet = true;
+			// 	}
+			// }
+			var set_code = set.code.toLowerCase();
+			var card = set.cards[Math.floor(Math.random() * set.cards.length)];
+			if (card.multiverseid) {
+				found = true;
+				card.MTG_SELECTED_TYPE = set_code;
+				cards[cards.length] = card;
+			}
+			else {
+			}
+		}
 	}
 
 	for (var i = 0; i < this.users.length; i++) {
 		if (this.users[i].id == who) {
 			this.users[i].hand.push.apply(this.users[i].hand, cards);
-			console.log("this.users[i].hand", this.users[i].hand);
 		}
 	}
 
