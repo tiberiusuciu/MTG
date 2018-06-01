@@ -47,7 +47,6 @@ io.on('connection', function (socket) {
 				io.emit('action', response);
         break;
       case config.actionConst.ASK_FOR_CARD:
-        console.log("ASKING FOR CARDS: ", action.amount);
         var users = game.drawCard(action.amount, action.who);
         io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
         break;
@@ -56,5 +55,7 @@ io.on('connection', function (socket) {
 
 	socket.on("disconnect", function () {
 		console.log('A user has disconnected!');
+    var users = game.removeUser(clientID);
+    io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
 	})
 });

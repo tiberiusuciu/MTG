@@ -22,7 +22,7 @@ Game.prototype.addUser = function(username, profilepic) {
 
 Game.prototype.getUsers = function() {
 	return this.users;
-}
+};
 
 Game.prototype.drawCard = function(amount, who) {
 	var cards = [];
@@ -63,6 +63,21 @@ Game.prototype.drawCard = function(amount, who) {
 	}
 
 	return this.users;
-}
+};
+
+Game.prototype.removeUser = function(who) {
+	var index = -1;
+	for (var i = 0; i < this.users.length; i++) {
+		if (this.users[i].id == who) {
+			index = 0;
+			break;
+		}
+	}
+	if (index > -1) {
+	  this.users = this.users.splice(index, 1);
+		console.log("REMOVING USER, HERE IS NEW lenght", this.users.length);
+	}
+	return this.users;
+};
 
 module.exports = Game;

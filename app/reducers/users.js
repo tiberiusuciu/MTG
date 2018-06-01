@@ -48,6 +48,8 @@ const users = (state = [
 	},
 ], action) => {
 	switch (action.type) {
+		case NEW_USER:
+			return action.users;
 		case USERS_UPDATE:
 			return action.users;
 		default:
