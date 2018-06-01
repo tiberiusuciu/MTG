@@ -13,7 +13,7 @@ class PlayerCountersList extends Component {
 		return (
 			<div className={styles.PlayerCountersList}>
 				<LifeCounter color={"tomato"} title={"Life"} value={20}/>
-				<HandCounter color={"royalblue"} title={"Hand"} value={7}/>
+				<HandCounter color={"royalblue"} title={"Hand"} value={this.props.user.hand.length}/>
 				<PoisonCounter color={"limegreen"} title={"Poison"} value={0}/>
 				<ManaCounter color={"#fffbd5"} title={"White"} value={5}/>
 				<ManaCounter color={"#a3d7f0"} title={"Blue"} value={0}/>

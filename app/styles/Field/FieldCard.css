@@ -13,8 +13,8 @@
   width: 71px;
   display: inline-block;
 	background-color: gold;
-  background-position: -40px -22px;
-  background-size: 150px 220px;
+  background-position: -40px -29px;
+  background-size: 170px 240px;
 }
 
 :local(.cardActive) {

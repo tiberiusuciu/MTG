@@ -7,6 +7,7 @@ export const FOCUS_CARD = config.actionConst.FOCUS_CARD;
 export const ASK_FOR_CARD = config.actionConst.ASK_FOR_CARD;
 export const CLIENT_CONNECT = config.actionConst.CLIENT_CONNECT;
 export const USERS_UPDATE = config.actionConst.USERS_UPDATE;
+export const PLAY_CARD = config.actionConst.PLAY_CARD;
 
 function action(type, payload = {}) {
 	return { type, ...payload };
@@ -106,3 +107,4 @@ export const invalidCommand = (parsedCommand) => action(INVALID_COMMAND, {parsed
 export const changeFocusedTab = (focusedTab) => action(FOCUS_TAB, {focusedTab});
 export const changeFocusedCard = (focusedCard) => action(FOCUS_CARD, {focusedCard});
 export const requestCardToHand = (amount, who) => action(ASK_FOR_CARD, {amount, who, meta: {remote: true}});
+export const requestPlayCard = (cardID, who) => action(PLAY_CARD, {cardID, who, meta: {remote: true}});

@@ -12,7 +12,7 @@ class MainPage extends Component {
 				<div className={styles.MainPageLayout}>
 					<div className={styles.HorizontalLayout}>
 						<div className={styles.MenuBox}>
-							<MenuBox game={this.props.game} users={this.props.users} client={this.props.client} onTabFocusedChange={this.props.onTabFocusedChange} onCardFocus={this.props.onCardFocus}/>
+							<MenuBox game={this.props.game} users={this.props.users} client={this.props.client} onTabFocusedChange={this.props.onTabFocusedChange} onCardFocus={this.props.onCardFocus} onRequestPlayCard={this.props.onRequestPlayCard}/>
 						</div>
 						<div className={styles.CardField}>
 							<CardField game={this.props.game} users={this.props.users} client={this.props.client} onCardFocus={this.props.onCardFocus} onRequestCardToHand={this.props.onRequestCardToHand}/>

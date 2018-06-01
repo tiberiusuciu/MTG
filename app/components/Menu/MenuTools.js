@@ -28,7 +28,7 @@ class MenuTools extends Component {
 		switch (this.props.focusedTab) {
 			case "Hand":
 				var user = this.getClientUser();
-				return (<HandTab user={user} onCardFocus={this.props.onCardFocus}/>)
+				return (<HandTab user={user} client={this.props.client} onCardFocus={this.props.onCardFocus} onRequestPlayCard={this.props.onRequestPlayCard}/>)
 				break;
 			case "Chat":
 				return (<ChatTab/>)

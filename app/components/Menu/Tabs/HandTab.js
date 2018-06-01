@@ -10,7 +10,7 @@ class HandTab extends Component {
 		return this.props.user.hand.map((card) => {
 			var cardLink = "https://deckmaster.info/images/cards/" + card.multiverseid + ".jpg"
 			return (
-				<HandCard cardInfo={card} cardLink={cardLink} onCardFocus={this.props.onCardFocus} />
+				<HandCard card={card} client={this.props.client} cardLink={cardLink} onCardFocus={this.props.onCardFocus} onRequestPlayCard={this.props.onRequestPlayCard} />
 			)
 		});
 	}

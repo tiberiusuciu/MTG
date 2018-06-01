@@ -7,6 +7,7 @@ var User = require('./User.js');
 var MTGJSON = require('../resources/mtg.json');
 
 function Game() {
+	this.cardID = 0;
 	this.users = [];
 	this.nextPlayerID = 0;
 	this.obj_keys_sets = Object.keys(MTGJSON);
@@ -49,9 +50,9 @@ Game.prototype.drawCard = function(amount, who) {
 			if (card.multiverseid) {
 				found = true;
 				card.MTG_SELECTED_TYPE = set_code;
+				card.MTG_CARD_ID = this.cardID;
+				this.cardID++;
 				cards[cards.length] = card;
-			}
-			else {
 			}
 		}
 	}
@@ -75,9 +76,50 @@ Game.prototype.removeUser = function(who) {
 	}
 	if (index > -1) {
 	  this.users = this.users.splice(index, 1);
-		console.log("REMOVING USER, HERE IS NEW lenght", this.users.length);
 	}
 	return this.users;
 };
+
+Game.prototype.playCard = function(cardID, who) {
+	var index = -1;
+	for (var i = 0; i < this.users.length; i++) {
+		if (this.users[i].id == who) {
+			index = 0;
+			break;
+		}
+	}
+	if (index > -1) {
+		var card = null;
+		_.remove(this.users[index].hand, function (cardElement) {
+			if (cardElement.MTG_CARD_ID == cardID) {
+				card = cardElement;
+				return true;
+			}
+		});
+
+		if (card) {
+			this.users[index].battlefield[this.users[index].battlefield.length] = card;
+		}
+
+
+		// var cardIndex = -1;
+		// for (var i = 0; i < this.users[index].hand.length; i++) {
+		// 	if (this.users[index].hand[i].MTG_CARD_ID == cardID) {
+		// 		cardIndex = i;
+		// 		break;
+		// 	}
+		// }
+		//
+		// if (cardIndex > -1) {
+		// 	var card = this.users[index].hand[cardIndex];
+		// 	// this.users[index].hand = this.users[index].hand.splice(cardIndex, 1);
+		// 	// _.remove(this.users[index].hand, function (cardElement) {
+		// 	// 	if (cardElement.)
+		// 	// });
+		// 	this.users[index].battlefield[this.users[index].battlefield.length] = card;
+		// }
+	}
+	return this.users;
+}
 
 module.exports = Game;
