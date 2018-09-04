@@ -32,6 +32,8 @@ Game.prototype.drawCard = function(amount, who) {
 		while (!found) {
 			var ran_set = this.obj_keys_sets[Math.floor(Math.random() * this.obj_keys_sets.length)];
 			var set = MTGJSON[ran_set];
+
+			// This is to exclude sets to generate if ever needed
 			// var foundElligibleSet = false;
 			// while (!foundElligibleSet) {
 			// 	console.log("LOOPING");
@@ -51,6 +53,7 @@ Game.prototype.drawCard = function(amount, who) {
 				found = true;
 				card.MTG_SELECTED_TYPE = set_code;
 				card.MTG_CARD_ID = this.cardID;
+				card.MTG_CARD_LINK = this.generate_image_link(card);
 				this.cardID++;
 				cards[cards.length] = card;
 			}
@@ -64,6 +67,12 @@ Game.prototype.drawCard = function(amount, who) {
 	}
 
 	return this.users;
+};
+
+Game.prototype.generate_image_link = function(card) {
+	console.log(card);
+	// Test links
+	return "";
 };
 
 Game.prototype.removeUser = function(who) {

@@ -13,4 +13,12 @@ module.exports = {
 		USERS_UPDATE: 'USERS_UPDATE',
 		PLAY_CARD: 'PLAY_CARD',
 	},
+	card_image_repository: {
+		// Requires SET/NUMBER OR MCINUMBER as additional arguments
+		hd_link: "https://img.scryfall.com/cards/large/en/",
+		hd_link_token:  ".jpg?1517813031",
+		// Require MULTIVERSE ID to be inserted in between
+		fallback_link: "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=",
+		fallback_link_ending: "&type=card",
+	}
 }
