@@ -7,10 +7,9 @@ import styles from '../../styles/Field/BattleField.css';
 class BattleField extends Component {
 
 	displayCards() {
-		return this.props.user.battlefield.map((card) => {			
-			var cardLink = "https://deckmaster.info/images/cards/" + card.multiverseid + ".jpg";
+		return this.props.user.battlefield.map((card) => {
 			return (
-				<FieldCard card={card} cardLink={cardLink} onCardFocus={this.props.onCardFocus}/>
+				<FieldCard card={card} onCardFocus={this.props.onCardFocus}/>
 			);
 		});
 	}

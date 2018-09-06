@@ -69,10 +69,53 @@ Game.prototype.drawCard = function(amount, who) {
 	return this.users;
 };
 
-Game.prototype.generate_image_link = function(card) {
-	console.log(card);
-	// Test links
-	return "";
+Game.prototype.generate_image_link = function(card, callback) {
+
+	var link = config.card_image_repository.hd_link;
+	link += card.MTG_SELECTED_TYPE + "/" + (card.mciNumber ?  card.mciNumber : card.number) + config.card_image_repository.hd_link_token;	
+	
+	/*
+	var request = require('request');
+	request(link)
+	.on('response', function(response) {
+		if (response.statusCode == 200) {
+			console.log("THIS IS GOOD!");
+			callback(link);
+		}
+		else {
+			callback(config.card_image_repository.fallback_link + card.multiverseid + config.card_image_repository.fallback_link_ending);
+		}
+	})
+	.on("error", function(err){
+		console.log("Problem reaching URL: ", err);
+	})
+	*/
+
+
+	/*
+	var request = require('then-request');
+
+	request('GET', link).done(function (response) {
+		if (response.statusCode == 200) {
+			console.log("THIS IS GOOD!");
+			return link;
+		}
+		else {
+			return config.card_image_repository.fallback_link + card.multiverseid + config.card_image_repository.fallback_link_ending;
+		}
+	});
+
+	*/
+
+
+	// Sync method for image generation, front-end will show a blank card in the meanwhile in order to maintain page responsiveness 
+
+	var request = require('sync-request');
+	var res = request('GET', link);
+	if (res.statusCode == 200) {
+		return link;
+	}
+	return config.card_image_repository.fallback_link + card.multiverseid + config.card_image_repository.fallback_link_ending;
 };
 
 Game.prototype.removeUser = function(who) {

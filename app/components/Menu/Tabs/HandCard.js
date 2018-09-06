@@ -13,8 +13,8 @@ class HandCard extends Component {
 
 	render() {
 		return (
-			<div key={this.props.card.MTG_CARD_ID} className={styles.cardShape} onMouseOver={() => {this.handleHover(this.props.cardLink)}} onDoubleClick={()=>{this.handlePlayCard()}}>
-        <img src={this.props.cardLink} width={100} height={140}/>
+			<div key={this.props.card.MTG_CARD_ID} className={styles.cardShape} onMouseOver={() => {this.handleHover(this.props.card.MTG_CARD_LINK)}} onDoubleClick={()=>{this.handlePlayCard()}}>
+        <img src={this.props.card.MTG_CARD_LINK} width={100} height={140}/>
 			</div>
 		)
 	}
