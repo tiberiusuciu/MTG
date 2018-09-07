@@ -16,7 +16,13 @@ class FieldCard extends Component {
 		this.props.onCardFocus(cardLink);
 	}
 
-	render() {
+	handleStop(event, data) {		
+		if (data.x <= -30) {
+			console.log("We are placing in a pile!!");
+		}
+	}
+
+	render() {		
 		return (
 			<Draggable
         axis="both"
@@ -26,7 +32,7 @@ class FieldCard extends Component {
         onStart={this.handleStart}
         onDrag={this.handleDrag}
         onStop={this.handleStop}
-				bounds={{top: 24, left: 24, bottom: 324}}>
+				bounds={{top: 5, left: -87, bottom: 324}}>
 				<div className={"handle " + styles.fieldCardPositionning} onMouseOver={() => {this.handleHover(this.props.card.MTG_CARD_LINK)}}>
 					<div style={{backgroundImage: "url(" + this.props.card.MTG_CARD_LINK + ")"}} className={styles.card}>
 

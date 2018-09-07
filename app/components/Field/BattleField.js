@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import FieldCard from './FieldCard';
+import PlayerInfo from './PlayerInfo';
 
 import styles from '../../styles/Field/BattleField.css';
 
@@ -17,6 +18,7 @@ class BattleField extends Component {
 	render() {
 		return (
 			<div className={styles.BattleField}>
+				<PlayerInfo user={this.props.user} client={this.props.client} onRequestCardToHand={this.props.onRequestCardToHand} />
 				{this.displayCards()}
 			</div>
 		)
