@@ -119,16 +119,9 @@ Game.prototype.generate_image_link = function(card, callback) {
 };
 
 Game.prototype.removeUser = function(who) {
-	var index = -1;
-	for (var i = 0; i < this.users.length; i++) {
-		if (this.users[i].id == who) {
-			index = 0;
-			break;
-		}
-	}
-	if (index > -1) {
-	  this.users = this.users.splice(index, 1);
-	}
+	_.remove(this.users, function(o) {
+		return o.id == who;
+	});	
 	return this.users;
 };
 
