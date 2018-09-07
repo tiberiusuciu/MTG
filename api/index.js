@@ -58,6 +58,10 @@ io.on('connection', function (socket) {
 				var users = game.updateCardPositions(action.card, action.who);
 				io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
 				break;
+			case config.actionConst.TAP_CARD:
+				var users = game.tapCard(action.cardID, action.who);
+				io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
+				break;
 		}
 	})
 

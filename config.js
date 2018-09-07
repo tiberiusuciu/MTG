@@ -13,6 +13,7 @@ module.exports = {
 		USERS_UPDATE: 'USERS_UPDATE',
 		PLAY_CARD: 'PLAY_CARD',
 		CARD_POSITION_UPDATE: 'CARD_POSITION_UPDATE',
+		TAP_CARD: 'TAP_CARD',
 	},
 	card_image_repository: {
 		// Requires SET/NUMBER OR MCINUMBER as additional arguments

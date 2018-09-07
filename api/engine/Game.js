@@ -54,6 +54,7 @@ Game.prototype.drawCard = function(amount, who) {
 				card.MTG_SELECTED_TYPE = set_code;
 				card.MTG_CARD_ID = this.cardID;
 				card.MTG_CARD_LINK = this.generate_image_link(card);
+				card.MTG_CARD_IS_TAPPED = false;
 				card.xpos = 24;
 				card.ypos = 24;
 				this.cardID++;
@@ -102,6 +103,24 @@ Game.prototype.updateCardPositions = function(card, who) {
 
 	return this.users;
 };
+
+Game.prototype.tapCard = function(cardID, who) {
+	this.users = _.map(this.users, function (user) {
+		if (user.id == who) {
+			console.log("");
+			
+			user.battlefield = _.map(user.battlefield, function (n) {
+				if (n.MTG_CARD_ID == cardID) {
+					n.MTG_CARD_IS_TAPPED = !n.MTG_CARD_IS_TAPPED;
+				}
+				return n;
+			});
+		}
+		return user;
+	});
+
+	return this.users;
+}
 
 Game.prototype.removeUser = function(who) {
 	_.remove(this.users, function(o) {

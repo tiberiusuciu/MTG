@@ -25,7 +25,13 @@ class FieldCard extends Component {
 		this.props.onUpdateCardPosition({id: this.props.card.MTG_CARD_ID, x: data.x, y: data.y}, this.props.client.userID);
 	}
 
-	render() {		
+	handleTapCard() {
+		this.props.onHandleTapCard(this.props.card.MTG_CARD_ID, this.props.client.userID);
+	}
+
+	render() {
+		console.log("tapped?", this.props.card.MTG_CARD_IS_TAPPED);
+		
 		return (
 			<Draggable
         axis="both"
@@ -33,11 +39,14 @@ class FieldCard extends Component {
         defaultPosition={{x: 24, y: 24}}
         position={{x: this.props.card.xpos, y: this.props.card.ypos}}
         onStart={this.handleStart}
-        onDrag={this.handleDrag}
+		onDrag={this.handleDrag}
         onStop={(e, data) => { this.handleStop(e, data)}}
 				bounds={{top: 5, left: -87, bottom: 324}}>
-				<div className={"handle " + styles.fieldCardPositionning} onMouseOver={() => {this.handleHover(this.props.card.MTG_CARD_LINK)}}>
-					<div style={{backgroundImage: "url(" + this.props.card.MTG_CARD_LINK + ")"}} className={styles.card}>
+				<div 
+					className={"handle " + styles.fieldCardPositionning} 
+					onMouseOver={() => {this.handleHover(this.props.card.MTG_CARD_LINK)}}
+					onDoubleClick={()=>{this.handleTapCard()}}>
+					<div style={{backgroundImage: "url(" + this.props.card.MTG_CARD_LINK + ")"}} className={styles.card + " " + (this.props.card.MTG_CARD_IS_TAPPED ? styles.tapped : "")}>
 
 					</div>
 				</div>

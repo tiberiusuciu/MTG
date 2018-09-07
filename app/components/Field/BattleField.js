@@ -14,7 +14,8 @@ class BattleField extends Component {
 					card={card}
 					onCardFocus={this.props.onCardFocus}
 					onUpdateCardPosition={this.props.onUpdateCardPosition}
-					client={this.props.client}/>
+					client={this.props.client}
+					onHandleTapCard={this.props.onHandleTapCard}/>
 			);
 		});
 	}

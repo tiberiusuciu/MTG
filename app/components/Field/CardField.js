@@ -14,7 +14,8 @@ class CardField extends Component {
 						client={this.props.client} 
 						onCardFocus={this.props.onCardFocus} 
 						onRequestCardToHand={this.props.onRequestCardToHand}
-						onUpdateCardPosition={this.props.onUpdateCardPosition}/>
+						onUpdateCardPosition={this.props.onUpdateCardPosition}
+						onHandleTapCard={this.props.onHandleTapCard}/>
 					<div className={styles.Separator}></div>
 				</div>
 			)
