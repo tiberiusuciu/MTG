@@ -47,7 +47,7 @@ io.on('connection', function (socket) {
 				io.emit('action', response);
         break;
       case config.actionConst.ASK_FOR_CARD:
-        var users = game.drawCard(action.amount, action.who);
+				var users = game.drawCard(action.amount, action.who);
         io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
         break;
       case config.actionConst.PLAY_CARD:
