@@ -72,41 +72,7 @@ Game.prototype.drawCard = function(amount, who) {
 Game.prototype.generate_image_link = function(card, callback) {
 
 	var link = config.card_image_repository.hd_link;
-	link += card.MTG_SELECTED_TYPE + "/" + (card.mciNumber ?  card.mciNumber : card.number) + config.card_image_repository.hd_link_token;	
-	
-	/*
-	var request = require('request');
-	request(link)
-	.on('response', function(response) {
-		if (response.statusCode == 200) {
-			console.log("THIS IS GOOD!");
-			callback(link);
-		}
-		else {
-			callback(config.card_image_repository.fallback_link + card.multiverseid + config.card_image_repository.fallback_link_ending);
-		}
-	})
-	.on("error", function(err){
-		console.log("Problem reaching URL: ", err);
-	})
-	*/
-
-
-	/*
-	var request = require('then-request');
-
-	request('GET', link).done(function (response) {
-		if (response.statusCode == 200) {
-			console.log("THIS IS GOOD!");
-			return link;
-		}
-		else {
-			return config.card_image_repository.fallback_link + card.multiverseid + config.card_image_repository.fallback_link_ending;
-		}
-	});
-
-	*/
-
+	link += card.MTG_SELECTED_TYPE + "/" + (card.mciNumber ?  card.mciNumber : card.number) + config.card_image_repository.hd_link_token;
 
 	// Sync method for image generation, front-end will show a blank card in the meanwhile in order to maintain page responsiveness 
 
@@ -126,44 +92,23 @@ Game.prototype.removeUser = function(who) {
 };
 
 Game.prototype.playCard = function(cardID, who) {
-	var index = -1;
-	for (var i = 0; i < this.users.length; i++) {
-		if (this.users[i].id == who) {
-			index = 0;
-			break;
-		}
-	}
-	if (index > -1) {
-		var card = null;
-		_.remove(this.users[index].hand, function (cardElement) {
-			if (cardElement.MTG_CARD_ID == cardID) {
-				card = cardElement;
-				return true;
+	this.users = _.map(this.users, function (user) {
+		if (user.id == who) {
+			var card = null;
+			_.remove(user.hand, function (cardElement) {
+				if (cardElement.MTG_CARD_ID == cardID) {
+					card = cardElement;
+					return true;
+				}
+			});
+	
+			if (card) {
+				user.battlefield[user.battlefield.length] = card;
 			}
-		});
-
-		if (card) {
-			this.users[index].battlefield[this.users[index].battlefield.length] = card;
 		}
+		return user;
+	});
 
-
-		// var cardIndex = -1;
-		// for (var i = 0; i < this.users[index].hand.length; i++) {
-		// 	if (this.users[index].hand[i].MTG_CARD_ID == cardID) {
-		// 		cardIndex = i;
-		// 		break;
-		// 	}
-		// }
-		//
-		// if (cardIndex > -1) {
-		// 	var card = this.users[index].hand[cardIndex];
-		// 	// this.users[index].hand = this.users[index].hand.splice(cardIndex, 1);
-		// 	// _.remove(this.users[index].hand, function (cardElement) {
-		// 	// 	if (cardElement.)
-		// 	// });
-		// 	this.users[index].battlefield[this.users[index].battlefield.length] = card;
-		// }
-	}
 	return this.users;
 }
 
