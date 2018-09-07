@@ -23,7 +23,6 @@ class FieldCard extends Component {
         handle=".handle"
         defaultPosition={{x: 24, y: 24}}
         position={null}
-        grid={[71, 100]}
         onStart={this.handleStart}
         onDrag={this.handleDrag}
         onStop={this.handleStop}
