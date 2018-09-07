@@ -8,6 +8,7 @@ export const ASK_FOR_CARD = config.actionConst.ASK_FOR_CARD;
 export const CLIENT_CONNECT = config.actionConst.CLIENT_CONNECT;
 export const USERS_UPDATE = config.actionConst.USERS_UPDATE;
 export const PLAY_CARD = config.actionConst.PLAY_CARD;
+export const CARD_POSITION_UPDATE = config.actionConst.CARD_POSITION_UPDATE;
 
 function action(type, payload = {}) {
 	return { type, ...payload };
@@ -108,3 +109,4 @@ export const changeFocusedTab = (focusedTab) => action(FOCUS_TAB, {focusedTab});
 export const changeFocusedCard = (focusedCard) => action(FOCUS_CARD, {focusedCard});
 export const requestCardToHand = (amount, who) => action(ASK_FOR_CARD, {amount, who, meta: {remote: true}});
 export const requestPlayCard = (cardID, who) => action(PLAY_CARD, {cardID, who, meta: {remote: true}});
+export const updateCardPosition = (card, who) => action(CARD_POSITION_UPDATE, {card, who, meta: {remote: true}});

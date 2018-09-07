@@ -12,6 +12,7 @@ module.exports = {
 		CLIENT_CONNECT: 'CLIENT_CONNECT',
 		USERS_UPDATE: 'USERS_UPDATE',
 		PLAY_CARD: 'PLAY_CARD',
+		CARD_POSITION_UPDATE: 'CARD_POSITION_UPDATE',
 	},
 	card_image_repository: {
 		// Requires SET/NUMBER OR MCINUMBER as additional arguments

@@ -8,7 +8,12 @@ class PlayerBox extends Component {
 	render() {
 		return (
 			<div className={styles.PlayerBox}>
-				<BattleField user={this.props.user} client={this.props.client} onRequestCardToHand={this.props.onRequestCardToHand} onCardFocus={this.props.onCardFocus} />
+				<BattleField 
+					user={this.props.user} 
+					client={this.props.client} 
+					onRequestCardToHand={this.props.onRequestCardToHand} 
+					onCardFocus={this.props.onCardFocus}
+					onUpdateCardPosition={this.props.onUpdateCardPosition}/>
 			</div>
 		)
 	}

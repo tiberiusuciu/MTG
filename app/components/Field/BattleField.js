@@ -10,7 +10,11 @@ class BattleField extends Component {
 	displayCards() {
 		return this.props.user.battlefield.map((card) => {
 			return (
-				<FieldCard card={card} onCardFocus={this.props.onCardFocus}/>
+				<FieldCard 
+					card={card}
+					onCardFocus={this.props.onCardFocus}
+					onUpdateCardPosition={this.props.onUpdateCardPosition}
+					client={this.props.client}/>
 			);
 		});
 	}

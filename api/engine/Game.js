@@ -54,6 +54,8 @@ Game.prototype.drawCard = function(amount, who) {
 				card.MTG_SELECTED_TYPE = set_code;
 				card.MTG_CARD_ID = this.cardID;
 				card.MTG_CARD_LINK = this.generate_image_link(card);
+				card.xpos = 24;
+				card.ypos = 24;
 				this.cardID++;
 				cards[cards.length] = card;
 			}
@@ -69,7 +71,7 @@ Game.prototype.drawCard = function(amount, who) {
 	return this.users;
 };
 
-Game.prototype.generate_image_link = function(card, callback) {
+Game.prototype.generate_image_link = function(card) {
 
 	var link = config.card_image_repository.hd_link;
 	link += card.MTG_SELECTED_TYPE + "/" + (card.mciNumber ?  card.mciNumber : card.number) + config.card_image_repository.hd_link_token;
@@ -82,6 +84,23 @@ Game.prototype.generate_image_link = function(card, callback) {
 		return link;
 	}
 	return config.card_image_repository.fallback_link + card.multiverseid + config.card_image_repository.fallback_link_ending;
+};
+
+Game.prototype.updateCardPositions = function(card, who) {
+	this.users = _.map(this.users, function (user) {
+		if (user.id == who) {
+			user.battlefield = _.map(user.battlefield, function (n) {
+				if (n.MTG_CARD_ID == card.id) {
+					n.xpos = card.x;
+					n.ypos = card.y;
+				}
+				return n;
+			});
+		}
+		return user;
+	});
+
+	return this.users;
 };
 
 Game.prototype.removeUser = function(who) {

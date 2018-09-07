@@ -16,10 +16,13 @@ class FieldCard extends Component {
 		this.props.onCardFocus(cardLink);
 	}
 
-	handleStop(event, data) {		
+	handleStop(event, data) {
 		if (data.x <= -30) {
 			console.log("We are placing in a pile!!");
 		}
+		// console.log("props", this.props);
+		
+		this.props.onUpdateCardPosition({id: this.props.card.MTG_CARD_ID, x: data.x, y: data.y}, this.props.client.userID);
 	}
 
 	render() {		
@@ -28,10 +31,10 @@ class FieldCard extends Component {
         axis="both"
         handle=".handle"
         defaultPosition={{x: 24, y: 24}}
-        position={null}
+        position={{x: this.props.card.xpos, y: this.props.card.ypos}}
         onStart={this.handleStart}
         onDrag={this.handleDrag}
-        onStop={this.handleStop}
+        onStop={(e, data) => { this.handleStop(e, data)}}
 				bounds={{top: 5, left: -87, bottom: 324}}>
 				<div className={"handle " + styles.fieldCardPositionning} onMouseOver={() => {this.handleHover(this.props.card.MTG_CARD_LINK)}}>
 					<div style={{backgroundImage: "url(" + this.props.card.MTG_CARD_LINK + ")"}} className={styles.card}>

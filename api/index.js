@@ -53,7 +53,11 @@ io.on('connection', function (socket) {
       case config.actionConst.PLAY_CARD:
         var users = game.playCard(action.cardID, action.who);
         io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
-        break;
+				break;
+			case config.actionConst.CARD_POSITION_UPDATE:
+				var users = game.updateCardPositions(action.card, action.who);
+				io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
+				break;
 		}
 	})
 

@@ -6,6 +6,7 @@ import {
 	setUserCurrentInput, submitCurrentInput, newLogEntry,
 	sendCommand, invalidCommand, changeFocusedTab,
 	changeFocusedCard, requestCardToHand, requestPlayCard,
+	updateCardPosition,
 } from '../actions';
 
 const _parser = (username, userCurrentInput) => {
@@ -61,6 +62,15 @@ const mapDispatchToProps = (dispatch) => {
 
 		onRequestPlayCard: (cardID, who) => {
 			dispatch(requestPlayCard(cardID, who));
+		},
+
+		onUpdateCardPosition: (card, who) => {
+			console.log("WE UPDATING!");
+			console.log("card", card);
+			console.log("who", who);
+			
+			dispatch(updateCardPosition(card, who));
+			
 		},
 	};
 };
