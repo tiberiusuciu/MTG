@@ -12,10 +12,12 @@ class BattleField extends Component {
 			return (
 				<FieldCard 
 					card={card}
+					users={this.props.users}
 					onCardFocus={this.props.onCardFocus}
 					onUpdateCardPosition={this.props.onUpdateCardPosition}
 					client={this.props.client}
-					onHandleTapCard={this.props.onHandleTapCard}/>
+					onHandleTapCard={this.props.onHandleTapCard}
+					onHandleSelect={this.props.onHandleSelect}/>
 			);
 		});
 	}

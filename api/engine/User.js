@@ -1,4 +1,4 @@
-var User = function(username, profilepic, userID) {
+var User = function(username, profilepic, userID, selectColor) {
 	this.id = userID;
 	this.username = username;
 	this.picture = profilepic;
@@ -18,6 +18,8 @@ var User = function(username, profilepic, userID) {
 		exile: []
 	};
 	this.battlefield = [];
+	this.selectColor = selectColor;
+	this.selectedCard = -1;
 }
 
 module.exports = User;

@@ -62,6 +62,10 @@ io.on('connection', function (socket) {
 				var users = game.tapCard(action.cardID, action.who);
 				io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
 				break;
+			case config.actionConst.SELECT_CARD:
+				var users = game.selectCard(action.cardID, action.who);
+				io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
+				break;
 		}
 	})
 

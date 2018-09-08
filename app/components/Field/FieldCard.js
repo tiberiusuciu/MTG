@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import FieldCard from './FieldCard';
 import Draggable from 'react-draggable';
 import Counter from './Counter';
+import _ from 'lodash';
 
 import styles from '../../styles/Field/FieldCard.css';
 
@@ -29,24 +30,49 @@ class FieldCard extends Component {
 		this.props.onHandleTapCard(this.props.card.MTG_CARD_ID, this.props.client.userID);
 	}
 
+	handleSelect() {
+		this.props.onHandleSelect(this.props.card.MTG_CARD_ID, this.props.client.userID);
+	}
+
+	checkForSelect(users, card) {
+		var isSelected = false;
+		var color = "";
+
+		_.map(users, function(user) {
+			if (user.selectedCard == card.MTG_CARD_ID) {
+				isSelected = true;
+				color = user.selectColor;
+			}
+		});
+
+		if (isSelected) {
+			return "2px solid " + color;
+		}
+		else {
+			return "";
+		}
+	}
+
 	render() {
-		console.log("tapped?", this.props.card.MTG_CARD_IS_TAPPED);
-		
 		return (
 			<Draggable
-        axis="both"
-        handle=".handle"
-        defaultPosition={{x: 24, y: 24}}
-        position={{x: this.props.card.xpos, y: this.props.card.ypos}}
-        onStart={this.handleStart}
-		onDrag={this.handleDrag}
-        onStop={(e, data) => { this.handleStop(e, data)}}
+				axis="both"
+				handle=".handle"
+				defaultPosition={{x: 24, y: 24}}
+				position={{x: this.props.card.xpos, y: this.props.card.ypos}}
+				onStart={this.handleStart}
+				onDrag={this.handleDrag}
+				onStop={(e, data) => { this.handleStop(e, data)}}
 				bounds={{top: 5, left: -87, bottom: 324}}>
 				<div 
 					className={"handle " + styles.fieldCardPositionning} 
 					onMouseOver={() => {this.handleHover(this.props.card.MTG_CARD_LINK)}}
-					onDoubleClick={()=>{this.handleTapCard()}}>
-					<div style={{backgroundImage: "url(" + this.props.card.MTG_CARD_LINK + ")"}} className={styles.card + " " + (this.props.card.MTG_CARD_IS_TAPPED ? styles.tapped : "")}>
+					onDoubleClick={()=>{this.handleTapCard()}}
+					onClick={()=>{this.handleSelect()}}>
+					<div style={{
+						backgroundImage: "url(" + this.props.card.MTG_CARD_LINK + ")",
+						border: this.checkForSelect(this.props.users, this.props.card),
+					}} className={styles.card + " " + (this.props.card.MTG_CARD_IS_TAPPED ? styles.tapped : "")}>
 
 					</div>
 				</div>

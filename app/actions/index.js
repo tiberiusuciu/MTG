@@ -10,6 +10,7 @@ export const USERS_UPDATE = config.actionConst.USERS_UPDATE;
 export const PLAY_CARD = config.actionConst.PLAY_CARD;
 export const CARD_POSITION_UPDATE = config.actionConst.CARD_POSITION_UPDATE;
 export const TAP_CARD = config.actionConst.TAP_CARD;
+export const SELECT_CARD = config.actionConst.SELECT_CARD;
 
 function action(type, payload = {}) {
 	return { type, ...payload };
@@ -112,3 +113,4 @@ export const requestCardToHand = (amount, who) => action(ASK_FOR_CARD, {amount, 
 export const requestPlayCard = (cardID, who) => action(PLAY_CARD, {cardID, who, meta: {remote: true}});
 export const updateCardPosition = (card, who) => action(CARD_POSITION_UPDATE, {card, who, meta: {remote: true}});
 export const tapCard = (cardID, who) => action(TAP_CARD, {cardID, who, meta: {remote: true}});
+export const selectCard = (cardID, who) => action(SELECT_CARD, {cardID, who, meta: {remote: true}});

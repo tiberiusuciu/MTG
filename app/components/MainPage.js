@@ -22,7 +22,8 @@ class MainPage extends Component {
 								onCardFocus={this.props.onCardFocus}
 								onRequestCardToHand={this.props.onRequestCardToHand}
 								onUpdateCardPosition={this.props.onUpdateCardPosition}
-								onHandleTapCard={this.props.onHandleTapCard}/>
+								onHandleTapCard={this.props.onHandleTapCard}
+								onHandleSelect={this.props.onHandleSelect}/>
 						</div>
 					</div>
 				</div>

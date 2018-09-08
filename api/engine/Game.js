@@ -14,7 +14,17 @@ function Game() {
 }
 
 Game.prototype.addUser = function(username, profilepic) {
-	var user = new User(username, profilepic, this.nextPlayerID);
+	// This is for testing purposes, users will already have a default select colors
+	var colors = ['#4286f4', '#f78b42', '#aae53b', '#e2dd38', '#dd35d2', '#db4a34'];
+	var color = colors[_.random(0, colors.length - 1)];
+	// TO BE REMOVED
+	var pics = [
+		"https://deckmaster.info/images/cards/DDP/401706.jpg",
+		"https://magiccards.info/scans/en/eve/85.jpg",
+		"https://img.scryfall.com/cards/large/en/ddg/58.jpg?1517813031",
+	]
+	profilepic = pics[_.random(0, pics.length - 1)];
+	var user = new User(username, profilepic, this.nextPlayerID, color);
 	this.users.push(user);
 	var id = this.nextPlayerID;
 	this.nextPlayerID++;
@@ -55,6 +65,7 @@ Game.prototype.drawCard = function(amount, who) {
 				card.MTG_CARD_ID = this.cardID;
 				card.MTG_CARD_LINK = this.generate_image_link(card);
 				card.MTG_CARD_IS_TAPPED = false;
+				// card.MTG_CARD_OWNER = who;
 				card.xpos = 24;
 				card.ypos = 24;
 				this.cardID++;
@@ -106,9 +117,7 @@ Game.prototype.updateCardPositions = function(card, who) {
 
 Game.prototype.tapCard = function(cardID, who) {
 	this.users = _.map(this.users, function (user) {
-		if (user.id == who) {
-			console.log("");
-			
+		if (user.id == who) {			
 			user.battlefield = _.map(user.battlefield, function (n) {
 				if (n.MTG_CARD_ID == cardID) {
 					n.MTG_CARD_IS_TAPPED = !n.MTG_CARD_IS_TAPPED;
@@ -120,7 +129,18 @@ Game.prototype.tapCard = function(cardID, who) {
 	});
 
 	return this.users;
-}
+};
+
+Game.prototype.selectCard = function(cardID, who) {
+	this.users = _.map(this.users, function (user) {
+		if (user.id == who) {
+			user.selectedCard = cardID;
+		}
+		return user;
+	});
+
+	return this.users;
+};
 
 Game.prototype.removeUser = function(who) {
 	_.remove(this.users, function(o) {
