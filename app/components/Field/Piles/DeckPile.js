@@ -15,7 +15,7 @@ class DeckPile extends Component {
 				<div className={styles.backCard}>
 					<div className={styles.backCircle}></div>
 				</div>
-				<div className={styles.cardCount}>60</div>
+				<div className={styles.cardCount}>&infin;</div>
 			</div>
 		)
 	}

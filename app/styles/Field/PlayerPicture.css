@@ -6,8 +6,8 @@
   display: inline-block;
   background-image: linear-gradient(to bottom, transparent, transparent, transparent, #000000, black, black, black);
 	background-color: gold;
-  background-position: -14px -50px;
-  background-size: 230px 300px;
+  background-position: -22px -50px;
+  background-size: 250px 320px;
 }
 
 :local(.PlayerName) {

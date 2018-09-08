@@ -22,6 +22,7 @@ Game.prototype.addUser = function(username, profilepic) {
 		"https://deckmaster.info/images/cards/DDP/401706.jpg",
 		"https://magiccards.info/scans/en/eve/85.jpg",
 		"https://img.scryfall.com/cards/large/en/ddg/58.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/ddn/19.jpg?1517813031",
 	]
 	profilepic = pics[_.random(0, pics.length - 1)];
 	var user = new User(username, profilepic, this.nextPlayerID, color);
