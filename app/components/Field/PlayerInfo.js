@@ -12,7 +12,7 @@ class PlayerInfo extends Component {
 			<div className={styles.PlayerInfo}>
 				<PlayerPicture user={this.props.user}/>
 				<div className={styles.QuicktoolsArea}>
-					<PlayerCountersList user={this.props.user} client={this.props.client} />
+					<PlayerCountersList user={this.props.user} client={this.props.client} onCounterClick={this.props.onCounterClick} />
 					<PlayerPiles user={this.props.user} client={this.props.client} onRequestCardToHand={this.props.onRequestCardToHand}/>
 				</div>
 			</div>

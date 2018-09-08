@@ -23,6 +23,8 @@ Game.prototype.addUser = function(username, profilepic) {
 		"https://magiccards.info/scans/en/eve/85.jpg",
 		"https://img.scryfall.com/cards/large/en/ddg/58.jpg?1517813031",
 		"https://img.scryfall.com/cards/large/en/ddn/19.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/c15/291.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/3ed/272.jpg?1517813031",
 	]
 	profilepic = pics[_.random(0, pics.length - 1)];
 	var user = new User(username, profilepic, this.nextPlayerID, color);
@@ -163,6 +165,37 @@ Game.prototype.playCard = function(cardID, who) {
 	
 			if (card) {
 				user.battlefield[user.battlefield.length] = card;
+			}
+		}
+		return user;
+	});
+
+	return this.users;
+}
+
+Game.prototype.counterUpdate = function(counter, who, amount) {
+	this.users = _.map(this.users, function (user) {
+		if (user.id == who) {
+			if (counter == "life") {
+				user.counters.life = amount;
+			}
+			else if (counter == "poison") {
+				user.counters.poison = amount;
+			}
+			else if (counter == "white") {
+				user.counters.white = amount;
+			}
+			else if (counter == "blue") {
+				user.counters.blue = amount;
+			}
+			else if (counter == "black") {
+				user.counters.black = amount;
+			}
+			else if (counter == "red") {
+				user.counters.red = amount;
+			}
+			else if (counter == "green") {
+				user.counters.green = amount;
 			}
 		}
 		return user;

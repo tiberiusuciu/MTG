@@ -17,7 +17,8 @@ class CardField extends Component {
 						onUpdateCardPosition={this.props.onUpdateCardPosition}
 						onHandleTapCard={this.props.onHandleTapCard}
 						users={this.props.users}
-						onHandleSelect={this.props.onHandleSelect}/>
+						onHandleSelect={this.props.onHandleSelect}
+						onCounterClick={this.props.onCounterClick}/>
 					<div className={styles.Separator}></div>
 				</div>
 			)

@@ -6,7 +6,8 @@ import {
 	setUserCurrentInput, submitCurrentInput, newLogEntry,
 	sendCommand, invalidCommand, changeFocusedTab,
 	changeFocusedCard, requestCardToHand, requestPlayCard,
-	updateCardPosition, tapCard, selectCard
+	updateCardPosition, tapCard, selectCard,
+	counterClick,
 } from '../actions';
 
 const _parser = (username, userCurrentInput) => {
@@ -74,6 +75,10 @@ const mapDispatchToProps = (dispatch) => {
 
 		onHandleSelect: (cardID, who) => {
 			dispatch(selectCard(cardID, who));
+		},
+
+		onCounterClick: (counter, who, amount) => {
+			dispatch(counterClick(counter.toLowerCase(), who, amount));
 		},
 	};
 };

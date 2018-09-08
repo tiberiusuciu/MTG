@@ -15,6 +15,7 @@ module.exports = {
 		CARD_POSITION_UPDATE: 'CARD_POSITION_UPDATE',
 		TAP_CARD: 'TAP_CARD',
 		SELECT_CARD: 'SELECT_CARD',
+		COUNTER_UPDATE: 'COUNTER_UPDATE',
 	},
 	card_image_repository: {
 		// Requires SET/NUMBER OR MCINUMBER as additional arguments

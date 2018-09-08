@@ -16,7 +16,8 @@ class PlayerBox extends Component {
 					onCardFocus={this.props.onCardFocus}
 					onUpdateCardPosition={this.props.onUpdateCardPosition}
 					onHandleTapCard={this.props.onHandleTapCard}
-					onHandleSelect={this.props.onHandleSelect}/>
+					onHandleSelect={this.props.onHandleSelect}
+					onCounterClick={this.props.onCounterClick}/>
 			</div>
 		)
 	}

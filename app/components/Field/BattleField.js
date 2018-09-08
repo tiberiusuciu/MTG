@@ -25,7 +25,11 @@ class BattleField extends Component {
 	render() {
 		return (
 			<div className={styles.BattleField}>
-				<PlayerInfo user={this.props.user} client={this.props.client} onRequestCardToHand={this.props.onRequestCardToHand} />
+				<PlayerInfo 
+					user={this.props.user}
+					client={this.props.client}
+					onRequestCardToHand={this.props.onRequestCardToHand}
+					onCounterClick={this.props.onCounterClick} />
 				{this.displayCards()}
 			</div>
 		)

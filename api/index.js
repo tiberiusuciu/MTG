@@ -66,6 +66,10 @@ io.on('connection', function (socket) {
 				var users = game.selectCard(action.cardID, action.who);
 				io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
 				break;
+			case config.actionConst.COUNTER_UPDATE:
+				var users = game.counterUpdate(action.counter, action.who, action.amount);
+				io.emit('action', {type: config.actionConst.USERS_UPDATE, users});
+				break;
 		}
 	})
 

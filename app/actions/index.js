@@ -11,6 +11,7 @@ export const PLAY_CARD = config.actionConst.PLAY_CARD;
 export const CARD_POSITION_UPDATE = config.actionConst.CARD_POSITION_UPDATE;
 export const TAP_CARD = config.actionConst.TAP_CARD;
 export const SELECT_CARD = config.actionConst.SELECT_CARD;
+export const COUNTER_UPDATE = config.actionConst.COUNTER_UPDATE;
 
 function action(type, payload = {}) {
 	return { type, ...payload };
@@ -114,3 +115,4 @@ export const requestPlayCard = (cardID, who) => action(PLAY_CARD, {cardID, who, 
 export const updateCardPosition = (card, who) => action(CARD_POSITION_UPDATE, {card, who, meta: {remote: true}});
 export const tapCard = (cardID, who) => action(TAP_CARD, {cardID, who, meta: {remote: true}});
 export const selectCard = (cardID, who) => action(SELECT_CARD, {cardID, who, meta: {remote: true}});
+export const counterClick = (counter, who, amount) => action(COUNTER_UPDATE, {counter, who, amount, meta: {remote: true}});
