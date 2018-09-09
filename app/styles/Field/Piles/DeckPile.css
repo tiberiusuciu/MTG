@@ -70,3 +70,31 @@
 	border: 1px solid #333;
 	/* border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%23FFC14D'/><stop offset='0.362' stop-color='%23FF4834'/><stop offset='1' stop-color='%233B0300'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch; */
 }
+
+:local(.contextStyling) .react-contextmenu--visible {
+	background-color: white !important;
+	z-index: 1 !important;
+	border-radius: 5px;
+	border: 2px solid #666;
+}
+
+:local(.contextStyling) .react-contextmenu-item {
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px;
+}
+
+:local(.contextStyling) .react-contextmenu-item:hover {
+	background-color: #EEE;
+}
+
+:local(.contextStyling) .react-contextmenu-item--divider {
+	height: 2px !important;
+	margin: 5px 0px;
+	padding: 0px 10px;
+	background-color: #333;
+}
+
+:local(.contextStyling) .react-contextmenu-item--divider:hover {
+	background-color: #333;
+}

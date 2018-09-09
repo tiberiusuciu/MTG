@@ -19,12 +19,17 @@ Game.prototype.addUser = function(username, profilepic) {
 	var color = colors[_.random(0, colors.length - 1)];
 	// TO BE REMOVED
 	var pics = [
-		"https://deckmaster.info/images/cards/DDP/401706.jpg",
-		"https://magiccards.info/scans/en/eve/85.jpg",
+		"https://img.scryfall.com/cards/large/en/bfz/204.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/eve/85.jpg?1517813031",
 		"https://img.scryfall.com/cards/large/en/ddg/58.jpg?1517813031",
 		"https://img.scryfall.com/cards/large/en/ddn/19.jpg?1517813031",
 		"https://img.scryfall.com/cards/large/en/c15/291.jpg?1517813031",
 		"https://img.scryfall.com/cards/large/en/3ed/272.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/c15/244.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/dtk/31.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/hou/14.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/9ed/151.jpg?1517813031",
+		"https://img.scryfall.com/cards/large/en/v15/12.jpg?1517813031",
 	]
 	profilepic = pics[_.random(0, pics.length - 1)];
 	var user = new User(username, profilepic, this.nextPlayerID, color);
